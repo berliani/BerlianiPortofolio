@@ -81,6 +81,7 @@
       <li><span class="tag-done">✅ DONE</span> Phase 3 selesai — About Me: Teks bio &amp; metadata verified ✓ · Stats counter animasi (5+, 4+, 6+, 1) teruji berjalan smooth ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 4 selesai — Skills &amp; Tech Stack: 6 kategori lengkap (Mobile, Web, AI, QA, DB, Tools) ✓ · Hover effect badge verified ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 5 selesai — Projects (5A s/d 5G): 19 projects verified ✓ · Asset asli FoodPlan, Bicaraku, Tuntun, Numbra Rush, Lokantara dipasang ✓ · Publikasi SINTA 4 + DOI link aktif ✓ · 7 Filter Tabs teruji di browser ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 6 selesai — Experience Timeline: 10 item riwayat terstruktur rapi ✓ · Alternating pink &amp; sage dots ✓ · Micro-interaction hover cards teruji di browser ✓</li>
     </ul>
   </div>
   <div class="done-banner">
@@ -258,6 +259,9 @@ function initPhase0(){
   // Phase 5G — Filter Logic
   const p5gnotes={p5gt1:"✅ 7 filter tab teruji: All (19), Mobile (4), Web (2), AI & Data (6), QA (3), Game Dev (1), Penelitian Dosen (3)",p5gt2:"✅ Animasi cardReveal smooth saat filter tab diklik",p5gt3:"✅ Responsive grid 1 col (mobile), 2 col (tablet), 3 col (desktop) berfungsi presisi"};
   ["p5gt1","p5gt2","p5gt3"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5gnotes[id]||"✅ Done"};changed=true;}});
+  // Phase 6 — Experience Timeline
+  const p6notes={p6t1:"✅ 10 item timeline terverifikasi lengkap: TA Tuntun, Jurnal SINTA 4, Riset Dosen Atlantara, KPI Magang PT ISG, PBI Home Credit, Ketua Himpunan PTTI, POMN, FoRTI, PKM-KC, Sekretaris Himpunan PTTI",p6t2:"✅ Deskripsi, instansi, tahun (2023–2026), dan tag peran terstruktur & terbaca jelas",p6t3:"✅ Alternating dots warna pink-deep & sage berselang-seling dengan garis timeline gradien vertikal rapi"};
+  ["p6t1","p6t2","p6t3"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p6notes[id]||"✅ Done"};changed=true;}});
   if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
 }
 
