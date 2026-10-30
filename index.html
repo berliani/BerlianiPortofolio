@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Berliani Risqi Dwi Saputri — Portfolio. D4 Teknik Informatika, Class of 2026. Mobile Developer, Data Scientist, QA Engineer. Flutter, Python, AI/ML." />
+  <meta name="keywords" content="Berliani Risqi, portfolio, Flutter, mobile developer, data scientist, AI, machine learning, QA, Tegal" />
+  <meta name="author" content="Berliani Risqi Dwi Saputri" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Berliani Risqi — Portfolio" />
+  <meta property="og:description" content="D4 Teknik Informatika · Mobile Dev · Data Scientist · QA Engineer · Class of 2026" />
+  <meta property="og:type" content="website" />
+
+  <title>Berliani Risqi — Portfolio</title>
+
+  <!-- Tailwind CSS CDN (Play CDN — no build step required) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pink-blush':  '#F2A7BE',
+            'pink-soft':   '#FAD4E0',
+            'pink-deep':   '#D45F82',
+            'sage':        '#8BAF84',
+            'sage-light':  '#C8DEC5',
+            'sage-dark':   '#4E7247',
+            'cream':       '#FDFAF6',
+            'cream-dark':  '#F5EFE8',
+          },
+          fontFamily: {
+            'display': ['"Playfair Display"', 'serif'],
+            'body':    ['Inter', 'sans-serif'],
+            'mono':    ['"DM Mono"', 'monospace'],
+          },
+          animation: {
+            'float': 'float 4s ease-in-out infinite',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-cream">
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+       ════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="font-display text-pink-deep font-bold text-xl tracking-tight">BRD.</a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#about"   class="nav-link" data-section="about">About</a>
+        <a href="#skills"  class="nav-link" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+
+      <!-- CTA Desktop -->
+      <a href="img/cv-berliani.pdf" download class="hidden md:inline-flex btn-primary text-sm py-2 px-5">
+        ↓ Download CV
+      </a>
+
+      <!-- Hamburger Mobile -->
+      <button id="hamburger" class="hamburger md:hidden" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="mobile-nav md:hidden">
+      <a href="#about"         class="nav-link py-1">About</a>
+      <a href="#skills"        class="nav-link py-1">Skills</a>
+      <a href="#projects"      class="nav-link py-1">Projects</a>
+      <a href="#experience"    class="nav-link py-1">Experience</a>
+      <a href="#certifications" class="nav-link py-1">Certifications</a>
+      <a href="#contact"       class="nav-link py-1">Contact</a>
+      <a href="img/cv-berliani.pdf" download class="btn-primary text-sm py-2 px-5 mt-2 justify-center">↓ Download CV</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════ -->
+  <section id="hero" class="bg-hero-gradient min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-5 py-16 w-full">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+
+        <!-- Text -->
+        <div class="flex-1 text-center lg:text-left">
+          <div class="reveal">
+            <span class="font-mono text-sm text-pink-deep bg-pink-soft px-3 py-1 rounded-full">
+              👋 Hi, I'm Berliani
+            </span>
+          </div>
+          <h1 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal mt-4 leading-tight">
+            Berliani Risqi<br/>
+            <span class="text-pink-deep">Dwi Saputri</span>
+          </h1>
+          <p class="reveal reveal-delay-2 font-mono text-sm text-sage-dark mt-3 tracking-wide">
+            D4 Teknik Informatika · Universitas Harkat Negeri · Class of 2026
+          </p>
+          <p class="reveal reveal-delay-3 text-base md:text-lg text-gray-600 mt-5 max-w-xl leading-relaxed">
+            Turning ideas into digital experiences —
+            <span class="text-pink-deep font-semibold">Mobile</span>,
+            <span class="text-sage-dark font-semibold">Web</span>,
+            <span class="text-pink-deep font-semibold">Data & AI</span>,
+            dan
+            <span class="text-sage-dark font-semibold">Quality Assurance</span>.
+          </p>
+
+          <div class="reveal reveal-delay-4 flex flex-wrap gap-3 mt-8 justify-center lg:justify-start">
+            <a href="#projects" class="btn-primary">Lihat Projects 🚀</a>
+            <a href="#contact"  class="btn-outline">Hubungi Saya ✉️</a>
+          </div>
+        </div>
+
+        <!-- Photo + Floating Badges -->
+        <div class="relative flex-shrink-0">
+          <div class="profile-ring reveal">
+            <img src="img/profile.jpg" alt="Berliani Risqi Dwi Saputri"
+              class="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80" />
+          </div>
+
+          <!-- Floating badges -->
+          <span class="float-badge bg-pink-soft text-pink-deep border border-pink-blush"
+            style="top:-18px; right:-10px;">Flutter</span>
+          <span class="float-badge bg-sage-light text-sage-dark border border-sage"
+            style="top:40%; right:-45px;">Python 🐍</span>
+          <span class="float-badge bg-pink-soft text-pink-deep border border-pink-blush"
+            style="bottom:20px; right:-20px;">AI/ML</span>
+          <span class="float-badge bg-sage-light text-sage-dark border border-sage"
+            style="bottom:-10px; left:0;">QA Testing</span>
+          <span class="float-badge bg-cream-dark text-charcoal border border-pink-soft"
+            style="top:10%; left:-35px;">SINTA 4 📄</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT
+       ════════════════════════════════════════ -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle mt-4">
+          Mahasiswa D4 Teknik Informatika yang passionate di bidang
+          pengembangan aplikasi mobile, data science, dan AI.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 reveal">
+          <p class="text-gray-600 leading-relaxed text-base mb-4">
+            Saya adalah <span class="text-pink-deep font-semibold">Berliani Risqi Dwi Saputri</span>,
+            lulusan D4 Teknik Informatika dari Politeknik Harapan Bersama /
+            Universitas Harkat Negeri, Class of 2026.
+            Selama kuliah, saya aktif mengembangkan berbagai proyek mulai dari
+            <strong>aplikasi mobile berbasis AI</strong> menggunakan Flutter & TensorFlow,
+            hingga <strong>sistem analitik data</strong> dan <strong>pengujian perangkat lunak</strong> berstandar ISO.
+          </p>
+          <p class="text-gray-600 leading-relaxed text-base mb-4">
+            Karya saya mencakup penelitian yang telah dipublikasikan di jurnal
+            <span class="text-sage-dark font-semibold">SINTA 4</span>, proyek penelitian dosen
+            aktif, serta pendanaan PKM-KC dan POMN dari Kemendikbudristek.
+          </p>
+          <p class="text-gray-600 leading-relaxed text-base">
+            Saya percaya teknologi terbaik adalah yang benar-benar membantu manusia —
+            dan itulah yang selalu saya wujudkan lewat setiap project. 🌸
+          </p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="skill-badge">📍 Tegal, Jawa Tengah</span>
+            <span class="skill-badge">🎓 Politeknik Harapan Bersama / UHN</span>
+            <span class="skill-badge">📅 Class of 2026</span>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4 flex-shrink-0 w-full lg:w-auto reveal reveal-delay-2">
+          <div class="stat-card">
+            <div class="text-3xl font-bold text-pink-deep font-display">
+              <span data-count="5" data-suffix="+">5+</span>
+            </div>
+            <div class="text-sm text-gray-500 mt-1">Mobile Apps</div>
+            <div class="text-2xl mt-1">📱</div>
+          </div>
+          <div class="stat-card">
+            <div class="text-3xl font-bold text-sage-dark font-display">
+              <span data-count="4" data-suffix="+">4+</span>
+            </div>
+            <div class="text-sm text-gray-500 mt-1">Web Projects</div>
+            <div class="text-2xl mt-1">🌐</div>
+          </div>
+          <div class="stat-card">
+            <div class="text-3xl font-bold text-pink-deep font-display">
+              <span data-count="6" data-suffix="+">6+</span>
+            </div>
+            <div class="text-sm text-gray-500 mt-1">AI & Data Projects</div>
+            <div class="text-2xl mt-1">🤖</div>
+          </div>
+          <div class="stat-card">
+            <div class="text-3xl font-bold text-sage-dark font-display">1</div>
+            <div class="text-sm text-gray-500 mt-1">Publikasi SINTA 4</div>
+            <div class="text-2xl mt-1">📄</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SKILLS
+       ════════════════════════════════════════ -->
+  <section id="skills" class="py-20 bg-pink-sage-gradient">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">Skills & Tech Stack</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle mt-4">Tools dan teknologi yang saya gunakan dalam setiap project</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Mobile Dev -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">📱</span> Mobile Development
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Flutter</span>
+            <span class="skill-badge">Dart</span>
+            <span class="skill-badge">GetX</span>
+            <span class="skill-badge">TFLite</span>
+            <span class="skill-badge">Provider</span>
+          </div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal reveal-delay-1">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">🌐</span> Web Development
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">HTML/CSS</span>
+            <span class="skill-badge">Flask</span>
+            <span class="skill-badge">Laravel</span>
+            <span class="skill-badge">Streamlit</span>
+            <span class="skill-badge">AdminLTE</span>
+          </div>
+        </div>
+
+        <!-- AI & Data -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal reveal-delay-2">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">🤖</span> AI & Data Science
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">YOLOv8</span>
+            <span class="skill-badge">CNN/VGG16</span>
+            <span class="skill-badge">Scikit-learn</span>
+            <span class="skill-badge">TensorFlow</span>
+          </div>
+        </div>
+
+        <!-- QA -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal reveal-delay-1">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">🧪</span> QA & Testing
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Selenium IDE</span>
+            <span class="skill-badge">Katalon Studio</span>
+            <span class="skill-badge">GTMetrix</span>
+            <span class="skill-badge">ISO 25010</span>
+            <span class="skill-badge">Postman</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal reveal-delay-2">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">🗄️</span> Database
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">SQLite</span>
+            <span class="skill-badge">Firebase</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-pink-soft/30 reveal reveal-delay-3">
+          <h3 class="font-semibold text-charcoal mb-3 flex items-center gap-2">
+            <span class="text-xl">🛠️</span> Tools & Design
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">Looker Studio</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Notion</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PROJECTS
+       ════════════════════════════════════════ -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-10 reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle mt-4">Kumpulan project dari perkuliahan, penelitian, dan internship</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs mb-10 reveal">
+        <button class="filter-tab" data-filter="all">✨ All</button>
+        <button class="filter-tab" data-filter="mobile">📱 Mobile</button>
+        <button class="filter-tab" data-filter="web">🌐 Web</button>
+        <button class="filter-tab" data-filter="ai">🤖 AI & Data</button>
+        <button class="filter-tab" data-filter="qa">🧪 QA</button>
+        <button class="filter-tab" data-filter="gamedev">🎮 Game Dev</button>
+        <button class="filter-tab" data-filter="riset">🔬 Penelitian Dosen</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectGrid">
+
+        <!-- ── MOBILE ── -->
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-sage-light">🍽️</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">FoodPlan</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Capstone Smt 5</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">App diet dengan deteksi bahan makanan via kamera menggunakan CNN/YOLOv8 & rekomendasi resep.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">YOLOv8</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="mobile">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-pink-soft">💬</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Bicaraku</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Capstone Smt 6</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">App komunikasi dengan fitur analisis sentimen dan dashboard analitik berbasis Streamlit.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">GetX</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="mobile">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-cream-dark">🧭</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Tuntun</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Tugas Akhir</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">App panduan visual berbasis kamera & AI untuk Skripsi — deteksi objek secara real-time.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">TFLite</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-cream-dark to-sage-light">🔐</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Secret App</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Smt 6</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Aplikasi mobile Flutter dengan fitur penyimpanan aman dan manajemen data pribadi.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── WEB ── -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-pink-soft">📊</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">FoodPlan Web Dashboard</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Capstone Smt 5</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Dashboard admin web untuk manajemen resep, user, dan statistik penggunaan app FoodPlan.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">AdminLTE</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="web">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-sage-light">📈</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Bicaraku Dashboard</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Capstone Smt 6</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Dashboard analitik berbasis Streamlit untuk visualisasi data sentimen & aktivitas pengguna Bicaraku.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── AI & DATA ── -->
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-cream-dark">🧠</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">CNN Food Detection</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Publikasi SINTA 4</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Deteksi bahan makanan menggunakan VGG16 untuk rekomendasi resep diet. Akurasi 96.28%. Dipublikasikan di JIMI Vol.9 No.2 2024.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CNN/VGG16</span>
+              <span class="tech-tag">TensorFlow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-cream-dark">🗺️</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">RAG Wisata Tegal</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Capstone Smt 5</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Chatbot berbasis Retrieval-Augmented Generation (RAG) untuk informasi destinasi wisata di Tegal.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LLM</span>
+              <span class="tech-tag">RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-sage-light">💳</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Home Credit Risk Analysis</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Internship PBI</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Analisis risiko kredit default nasabah menggunakan teknik machine learning dalam Project Based Internship.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-cream-dark to-pink-soft">🏃</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Pose Detection</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Practice</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Model deteksi pose tubuh manusia secara real-time untuk aplikasi fitness dan olahraga.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">MediaPipe</span>
+              <span class="tech-tag">YOLO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-pink-soft">📊</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Google Looker Dashboard</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Course</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Visualisasi data interaktif dengan Google Looker Studio untuk analisis bisnis dan pelaporan.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Looker Studio</span>
+              <span class="tech-tag">Google Sheets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="ai">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-cream-dark">🕷️</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Data Scraping</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Practice</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Scraping dan pengolahan data web untuk keperluan analisis dan dataset penelitian.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">BeautifulSoup</span>
+              <span class="tech-tag">Scrapy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── QA ── -->
+        <div class="project-card reveal" data-category="qa">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-cream-dark">🔍</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">QA FoodPlan — ISO 25010</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Smt 5</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Pengujian lengkap aplikasi FoodPlan meliputi functional, performance, dan usability testing menggunakan standar ISO 25010.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Selenium IDE</span>
+              <span class="tech-tag">GTMetrix</span>
+              <span class="tech-tag">ISO 25010</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="qa">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-sage-light">⚗️</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">QA Bicaraku — ISO 25010</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Smt 6</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Laporan pengujian kualitas perangkat lunak Bicaraku menggunakan Katalon Studio dan standar ISO 25010.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Katalon Studio</span>
+              <span class="tech-tag">ISO 25010</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="qa">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-cream-dark to-pink-soft">🔌</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">API Testing FoodPlan</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Smt 5</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Pengujian Web API endpoint FoodPlan secara menyeluruh meliputi validasi input, response, dan edge case.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Postman</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── GAME DEV ── -->
+        <div class="project-card reveal" data-category="gamedev">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-sage-light">🔢</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Numbra Rush</h3>
+              <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full font-mono whitespace-nowrap">UAS Game Dev Smt 6</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Game edukasi matematika yang menantang untuk meningkatkan kemampuan berhitung dengan gameplay yang seru.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PENELITIAN DOSEN ── -->
+        <div class="project-card reveal" data-category="riset">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-sage-light to-pink-soft">🗺️</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Lokantara — POS Wisata</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Penelitian Dosen</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Sistem Point-of-Sale (POS) untuk mitra wisata dalam platform Atlantara — manajemen tiket, transaksi & laporan.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Web</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="riset">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-cream-dark">📲</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Lokantara Mobile</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Penelitian Dosen</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Aplikasi mobile wisatawan untuk platform Atlantara — booking, navigasi, dan informasi destinasi wisata.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="riset">
+          <div class="project-thumb-placeholder bg-gradient-to-br from-cream-dark to-sage-light">🤖</div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Lokantara AI</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Penelitian Dosen</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-3">Modul AI untuk rekomendasi wisata dan analitik data pengunjung pada ekosistem platform Atlantara.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">AI/ML</span>
+              <span class="tech-tag">API</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projectGrid -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       EXPERIENCE & ACHIEVEMENT
+       ════════════════════════════════════════ -->
+  <section id="experience" class="py-20 bg-pink-sage-gradient">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">Experience & Achievement</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle mt-4">Perjalanan akademik, organisasi, dan pencapaian selama kuliah</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="background: var(--pink-deep);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🎓</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Tugas Akhir / Skripsi — App "Tuntun"</h3>
+                <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2026</span>
+              </div>
+              <p class="text-sm text-gray-500">Politeknik Harapan Bersama / Universitas Harkat Negeri</p>
+              <p class="text-sm text-gray-600 mt-1">Pengembangan aplikasi panduan visual berbasis Flutter & AI untuk pengguna difabel — penyelesaian studi D4 Teknik Informatika.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot" style="background: var(--sage);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📄</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Publikasi Jurnal SINTA 4</h3>
+                <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">Des 2024</span>
+              </div>
+              <p class="text-sm text-gray-500">Jurnal Ilmiah Informatika (JIMI) — Vol. 9 No. 2, Hal. 134–141</p>
+              <p class="text-sm text-gray-600 mt-1">"Deteksi Bahan Makanan untuk Rekomendasi Resep Masakan pada Program Diet Menggunakan Algoritma CNN" · DOI: 10.35316/.v9i2.6384</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot" style="background: var(--pink-deep);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🔬</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Penelitian Dosen — Atlantara & Lokantara</h3>
+                <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2025–2026</span>
+              </div>
+              <p class="text-sm text-gray-500">Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-600 mt-1">Berperan dalam development & QA sistem wisata terintegrasi Atlantara — meliputi POS Web, Mobile Flutter, dan modul AI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="background: var(--sage);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🏢</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">KPI / Magang — PT ISG</h3>
+                <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2025</span>
+              </div>
+              <p class="text-sm text-gray-500">Kerja Praktik Industri — Semester 7</p>
+              <p class="text-sm text-gray-600 mt-1">Magang di PT ISG dengan fokus pengembangan sistem dan pelaporan berbasis data.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot" style="background: var(--pink-deep);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">💼</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Project Based Internship — Home Credit</h3>
+                <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2025</span>
+              </div>
+              <p class="text-sm text-gray-500">Data Analysis Track</p>
+              <p class="text-sm text-gray-600 mt-1">Analisis risiko kredit dan pemodelan machine learning pada dataset Home Credit Default Risk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot" style="background: var(--sage);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">👑</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Ketua Himpunan Mahasiswa PTTI</h3>
+                <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2024</span>
+              </div>
+              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-600 mt-1">Memimpin organisasi himpunan mahasiswa program studi, mengkoordinir kegiatan akademik dan non-akademik anggota.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="background: var(--pink-deep);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🏆</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Pendanaan POMN — Program Ormawa Membangun Negeri</h3>
+                <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2024</span>
+              </div>
+              <p class="text-sm text-gray-500">Kemendikbudristek RI</p>
+              <p class="text-sm text-gray-600 mt-1">Lolos pendanaan Program Ormawa Membangun Negeri (POMN) dari Kemendikbudristek RI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot" style="background: var(--sage);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🔭</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Research Staff — FoRTI (Forum Riset Teknologi Informasi)</h3>
+                <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2024</span>
+              </div>
+              <p class="text-sm text-gray-500">Forum Riset Teknologi Informasi</p>
+              <p class="text-sm text-gray-600 mt-1">Anggota staf riset di Forum Riset Teknologi Informasi (FoRTI), berkontribusi dalam penelitian di bidang teknologi informasi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot" style="background: var(--pink-deep);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🏅</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Pendanaan PKM-KC — Program Kreativitas Mahasiswa</h3>
+                <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2023</span>
+              </div>
+              <p class="text-sm text-gray-500">Kemendikbudristek RI — Bidang Karsa Cipta (KC)</p>
+              <p class="text-sm text-gray-600 mt-1">Lolos seleksi dan mendapatkan pendanaan PKM-KC dari Kemendikbudristek RI untuk pengembangan inovasi teknologi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="background: var(--sage);"></div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📋</span>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-charcoal text-base">Sekretaris Himpunan Mahasiswa PTTI</h3>
+                <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2023</span>
+              </div>
+              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-600 mt-1">Bertanggung jawab dalam pengelolaan administrasi, dokumentasi, dan korespondensi organisasi himpunan mahasiswa.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CERTIFICATIONS
+       ════════════════════════════════════════ -->
+  <section id="certifications" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">Certifications & Publikasi</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle mt-4">Sertifikasi profesional dan karya ilmiah yang telah diraih</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Publikasi — paling menonjol -->
+        <div class="cert-card cert-badge-pub col-span-full sm:col-span-2 lg:col-span-1 reveal">
+          <div class="text-3xl">📄</div>
+          <h3 class="font-semibold text-charcoal text-base">Publikasi SINTA 4</h3>
+          <p class="text-sm text-gray-600">Jurnal Ilmiah Informatika (JIMI) · Vol. 9 No. 2 · 2024</p>
+          <p class="text-xs text-pink-deep font-mono mt-1">DOI: 10.35316/.v9i2.6384</p>
+          <a href="https://journal.ibrahimy.ac.id/index.php/JIMI/article/view/6384" target="_blank"
+            class="text-xs text-pink-deep hover:underline mt-1 inline-block">Lihat Artikel →</a>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="text-2xl">🏅</div>
+          <h3 class="font-semibold text-charcoal text-sm">BNSP — Associate Data Scientist</h3>
+          <p class="text-xs text-gray-500">Badan Nasional Sertifikasi Profesi</p>
+          <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full self-start font-mono">Kompetensi</span>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="text-2xl">🤖</div>
+          <h3 class="font-semibold text-charcoal text-sm">Huawei — AI Track</h3>
+          <p class="text-xs text-gray-500">AI Beginner & AI Intermediate</p>
+          <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full self-start font-mono">Huawei ICT</span>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="text-2xl">🏛️</div>
+          <h3 class="font-semibold text-charcoal text-sm">Digitalent — AI Track</h3>
+          <p class="text-xs text-gray-500">AI Beginner · AI Intermediate · Keamanan AI</p>
+          <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full self-start font-mono">Kominfo</span>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="text-2xl">📚</div>
+          <h3 class="font-semibold text-charcoal text-sm">MySkill — Data Track</h3>
+          <p class="text-xs text-gray-500">Basic Data · Data Analysis · Data Visualization · Looker Studio</p>
+          <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full self-start font-mono">MySkill</span>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="text-2xl">🌐</div>
+          <h3 class="font-semibold text-charcoal text-sm">Coursera</h3>
+          <p class="text-xs text-gray-500">Sertifikasi internasional bidang IT & Data</p>
+          <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full self-start font-mono">Coursera</span>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="text-2xl">💼</div>
+          <h3 class="font-semibold text-charcoal text-sm">Project Based Internship</h3>
+          <p class="text-xs text-gray-500">Home Credit — Data Analysis Track</p>
+          <span class="text-xs bg-pink-soft text-pink-deep px-2 py-0.5 rounded-full self-start font-mono">Internship</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CONTACT
+       ════════════════════════════════════════ -->
+  <section id="contact" class="py-20 bg-footer-gradient">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title text-white">Let's Connect</h2>
+        <div class="w-16 h-1 bg-white/40 rounded-full mx-auto mt-3"></div>
+        <p class="text-white/80 mt-4 text-base">Ada project, kolaborasi, atau sekadar mau say hi? Feel free to reach out! 🌸</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <!-- Form -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20 reveal">
+          <form id="contactForm">
+            <div class="flex flex-col gap-4">
+              <div>
+                <label class="text-white/80 text-sm mb-1.5 block font-medium">Nama</label>
+                <input id="contactName" type="text" class="form-input" placeholder="Nama kamu..." required />
+              </div>
+              <div>
+                <label class="text-white/80 text-sm mb-1.5 block font-medium">Email</label>
+                <input id="contactEmail" type="email" class="form-input" placeholder="email@example.com" required />
+              </div>
+              <div>
+                <label class="text-white/80 text-sm mb-1.5 block font-medium">Pesan</label>
+                <textarea id="contactMessage" class="form-input" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
+              </div>
+              <button id="submitBtn" type="submit" class="btn-primary justify-center mt-2 bg-white text-pink-deep hover:bg-cream">
+                Kirim Pesan ✉️
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="reveal reveal-delay-2 flex flex-col gap-6">
+          <div class="flex items-center gap-4 text-white">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-xl flex-shrink-0">📧</div>
+            <div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mb-0.5">Email</div>
+              <a href="mailto:berlianiirisqi@gmail.com" class="text-white font-medium hover:text-pink-soft transition-colors">berlianiirisqi@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-white">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-xl flex-shrink-0">📍</div>
+            <div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mb-0.5">Lokasi</div>
+              <span class="text-white font-medium">Tegal, Jawa Tengah, Indonesia</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex gap-3 mt-2">
+            <a href="https://linkedin.com" target="_blank"
+              class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white text-xl transition-all hover:scale-110" title="LinkedIn">in</a>
+            <a href="https://github.com" target="_blank"
+              class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white text-xl transition-all hover:scale-110" title="GitHub">🐙</a>
+            <a href="https://instagram.com" target="_blank"
+              class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white text-xl transition-all hover:scale-110" title="Instagram">📸</a>
+          </div>
+
+          <a href="img/cv-berliani.pdf" download
+            class="btn-outline border-white/40 text-white hover:bg-white/10 hover:border-white mt-2 justify-center">
+            ↓ Download CV / Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════ -->
+  <footer class="bg-charcoal text-white py-8">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="font-display text-xl text-pink-blush font-bold">BRD.</span>
+          <p class="text-xs text-gray-400 mt-1">Turning ideas into digital experiences 🌸</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+          <a href="#hero"   class="hover:text-pink-blush transition-colors">Home</a>
+          <a href="#about"  class="hover:text-pink-blush transition-colors">About</a>
+          <a href="#projects" class="hover:text-pink-blush transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-pink-blush transition-colors">Contact</a>
+        </div>
+        <p class="text-xs text-gray-500 text-center">
+          © 2026 Berliani Risqi Dwi Saputri. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
