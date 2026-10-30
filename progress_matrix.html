@@ -83,6 +83,7 @@
       <li><span class="tag-done">✅ DONE</span> Phase 5 selesai — Projects (5A s/d 5G): 19 projects verified ✓ · Asset asli FoodPlan, Bicaraku, Tuntun, Numbra Rush, Lokantara dipasang ✓ · Publikasi SINTA 4 + DOI link aktif ✓ · 7 Filter Tabs teruji di browser ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 6 selesai — Experience Timeline: 10 item riwayat terstruktur rapi ✓ · Alternating pink &amp; sage dots ✓ · Micro-interaction hover cards teruji di browser ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 7 selesai — Certifications: 7 kartu sertifikasi &amp; publikasi verified ✓ · Link artikel SINTA 4 (JIMI Vol.9 No.2) aktif &amp; live ✓ · CV file img/cv-berliani.pdf verified ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 8 selesai — Contact: URL LinkedIn, GitHub (berliani), Instagram aktif ✓ · SVG Icons tajam ✓ · Form email submit mailto teruji &amp; interaktif dengan feedback status ✓</li>
     </ul>
   </div>
   <div class="done-banner">
@@ -266,6 +267,15 @@ function initPhase0(){
   // Phase 7 — Certifications & Publikasi
   const p7notes={p7t1:"✅ 7 kartu sertifikat & publikasi terverifikasi: Publikasi SINTA 4, BNSP Data Scientist, Huawei AI, Digitalent Kominfo, MySkill Data, Coursera, PBI Home Credit",p7t2:"✅ Link artikel SINTA 4 terverifikasi aktif langsung ke OJS JIMI (jurnal.ibrahimy.ac.id/index.php/JIMI/article/view/6384) sebagai First Author",p7t3:"✅ File CV terverifikasi di folder img/cv-berliani.pdf (4 MB) dan tombol Download CV berfungsi"};
   ["p7t1","p7t2","p7t3"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p7notes[id]||"✅ Done"};changed=true;}});
+  // Phase 8 — Contact
+  const p8notes={
+    p8t1:"✅ URL LinkedIn profil asli terpasang: https://www.linkedin.com/in/berliani-risqi/ dengan rel='noopener noreferrer' dan icon SVG",
+    p8t2:"✅ URL GitHub profil asli terpasang: https://github.com/berliani dengan icon SVG",
+    p8t3:"✅ URL Instagram profil asli terpasang: https://www.instagram.com/berlianirisqi/ dengan icon SVG",
+    p8t4:"✅ Email mailto target berlianiirisqi@gmail.com terverifikasi di script.js",
+    p8t5:"✅ Form submit teruji: mailto client terbuka & tombol submit menampilkan feedback interaktif '✓ Pesan Terkirim!'"
+  };
+  ["p8t1","p8t2","p8t3","p8t4","p8t5"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p8notes[id]||"✅ Done"};changed=true;}});
   if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
 }
 
