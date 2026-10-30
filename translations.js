@@ -6,6 +6,7 @@
 const TRANSLATIONS = {
   id: {
     // Navbar
+    nav_home: 'Beranda',
     nav_about: 'Tentang',
     nav_skills: 'Keahlian',
     nav_projects: 'Proyek',
@@ -85,6 +86,8 @@ const TRANSLATIONS = {
     // Certifications
     certs_title: "Sertifikasi & Publikasi",
     certs_subtitle: "Sertifikasi profesional nasional & internasional serta publikasi ilmiah bereputasi",
+    cert_sinta4_title: "Publikasi SINTA 4",
+    cert_sinta4_link: "Lihat Artikel Ilmiah SINTA 4 ↗",
     cert_hint: "Lihat Sertifikat Asli ↗",
     cert_verified: "Tervalidasi Resmi",
     cert_view_link: "Buka Verifikasi Asli ↗",
@@ -118,6 +121,7 @@ const TRANSLATIONS = {
 
   en: {
     // Navbar
+    nav_home: 'Home',
     nav_about: 'About',
     nav_skills: 'Skills',
     nav_projects: 'Projects',
@@ -197,6 +201,8 @@ const TRANSLATIONS = {
     // Certifications
     certs_title: "Certifications & Publications",
     certs_subtitle: "National and international professional certifications and published scientific research",
+    cert_sinta4_title: "SINTA 4 Publication",
+    cert_sinta4_link: "View SINTA 4 Research Paper ↗",
     cert_hint: "View Certificate ↗",
     cert_verified: "Officially Verified",
     cert_view_link: "Open Verification ↗",
