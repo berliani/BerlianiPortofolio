@@ -80,6 +80,7 @@
       <li><span class="tag-done">✅ DONE</span> Phase 2 selesai — Hero Section: Foto profil rounded + gradient ring ✓ · 5 floating badges smooth ✓ · Responsif mobile/desktop verified ✓ · Email verified ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 3 selesai — About Me: Teks bio &amp; metadata verified ✓ · Stats counter animasi (5+, 4+, 6+, 1) teruji berjalan smooth ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 4 selesai — Skills &amp; Tech Stack: 6 kategori lengkap (Mobile, Web, AI, QA, DB, Tools) ✓ · Hover effect badge verified ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 5 selesai — Projects (5A s/d 5G): 19 projects verified ✓ · Asset asli FoodPlan, Bicaraku, Tuntun, Numbra Rush, Lokantara dipasang ✓ · Publikasi SINTA 4 + DOI link aktif ✓ · 7 Filter Tabs teruji di browser ✓</li>
     </ul>
   </div>
   <div class="done-banner">
@@ -236,6 +237,27 @@ function initPhase0(){
   // Phase 4 — Skills reviewed di browser (30 Okt 2026)
   const p4notes={p4t1:"✅ 6 kategori skill lengkap & terstruktur: Mobile, Web, AI & Data, QA & Testing, Database, Tools & Design",p4t2:"✅ Hover effect micro-lift (-2px), background tint pink-soft, border glow, dan soft shadow aktif"};
   ["p4t1","p4t2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p4notes[id]||"✅ Done"};changed=true;}});
+  // Phase 5A — Projects Mobile
+  const p5anotes={p5at1:"✅ 4 card Mobile terverifikasi (FoodPlan, Bicaraku, Tuntun, Secret App)",p5at2:"✅ Asset FoodPlan dicopy: img/projects/foodplan.png",p5at3:"✅ Asset Bicaraku mockup dicopy: img/projects/bicaraku.png",p5at4:"✅ Asset Tuntun ilustrasi dicopy: img/projects/tuntun.png",p5at5:"✅ Placeholder thumbnail diganti <img> tag dengan styling rapi & aspect ratio terjaga"};
+  ["p5at1","p5at2","p5at3","p5at4","p5at5"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5anotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5B — Projects Web
+  const p5bnotes={p5bt1:"✅ 2 card Web terverifikasi (FoodPlan Web Dashboard, Bicaraku Dashboard)",p5bt2:"✅ Banner FoodPlan Web dicopy: img/projects/foodplan-web.png"};
+  ["p5bt1","p5bt2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5bnotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5C — Penelitian Dosen
+  const p5cnotes={p5ct1:"✅ 3 card Penelitian Dosen terverifikasi (Lokantara POS, Lokantara Mobile, Lokantara AI)",p5ct2:"✅ Logo Atlantara/Lokantara resolusi tinggi dicopy: img/projects/lokantara.png"};
+  ["p5ct1","p5ct2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5cnotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5D — AI & Data
+  const p5dnotes={p5dt1:"✅ 6 card AI & Data terverifikasi (CNN, RAG, Home Credit, Pose Detection, Looker, Scraping)",p5dt2:"✅ DOI link aktif: https://doi.org/10.35316/.v9i2.6384 terpasang di card CNN Food Detection",p5d3:"✅ Badge 'Publikasi SINTA 4' tampil menonjol pada card CNN Food Detection",p5dt3:"✅ Badge 'Publikasi SINTA 4' tampil menonjol pada card CNN Food Detection"};
+  ["p5dt1","p5dt2","p5dt3"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5dnotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5E — QA
+  const p5enotes={p5et1:"✅ 3 card QA terverifikasi (QA FoodPlan ISO 25010, QA Bicaraku ISO 25010, API Testing FoodPlan)"};
+  ["p5et1"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5enotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5F — Game Dev
+  const p5fnotes={p5ft1:"✅ Card Numbra Rush terverifikasi",p5ft2:"✅ Logo/banner pixel art Numbra Rush dicopy: img/projects/numbrarush.png"};
+  ["p5ft1","p5ft2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5fnotes[id]||"✅ Done"};changed=true;}});
+  // Phase 5G — Filter Logic
+  const p5gnotes={p5gt1:"✅ 7 filter tab teruji: All (19), Mobile (4), Web (2), AI & Data (6), QA (3), Game Dev (1), Penelitian Dosen (3)",p5gt2:"✅ Animasi cardReveal smooth saat filter tab diklik",p5gt3:"✅ Responsive grid 1 col (mobile), 2 col (tablet), 3 col (desktop) berfungsi presisi"};
+  ["p5gt1","p5gt2","p5gt3"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p5gnotes[id]||"✅ Done"};changed=true;}});
   if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
 }
 
