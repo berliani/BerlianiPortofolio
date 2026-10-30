@@ -78,6 +78,8 @@
       <li><span class="tag-done">✅ DONE</span> Phase 0 dieksekusi — folder <code>D:\kulyah\BerlianiPortfolio\</code> dibuat, git init &amp; commit pertama</li>
       <li><span class="tag-done">✅ DONE</span> Phase 1 selesai — Navbar sticky ✓ · Hamburger mobile ✓ · Active scroll highlight ✓ · CV PDF dicopy ke <code>img/cv-berliani.pdf</code></li>
       <li><span class="tag-done">✅ DONE</span> Phase 2 selesai — Hero Section: Foto profil rounded + gradient ring ✓ · 5 floating badges smooth ✓ · Responsif mobile/desktop verified ✓ · Email verified ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 3 selesai — About Me: Teks bio &amp; metadata verified ✓ · Stats counter animasi (5+, 4+, 6+, 1) teruji berjalan smooth ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 4 selesai — Skills &amp; Tech Stack: 6 kategori lengkap (Mobile, Web, AI, QA, DB, Tools) ✓ · Hover effect badge verified ✓</li>
     </ul>
   </div>
   <div class="done-banner">
@@ -228,6 +230,12 @@ function initPhase0(){
   // Phase 2 — Hero reviewed di browser (30 Okt 2026)
   const p2notes={p2t1:"✅ Foto profil rounded + gradient ring border pink-sage tampil sempurna di semua breakpoint",p2t2:"✅ 5 floating badges smooth (Flutter, Python, AI/ML, QA Testing, SINTA 4) — animasi berjalan baik tanpa clipping",p2t3:"✅ Responsif: mobile 375px (foto atas teks bawah centered), tablet 768px, desktop 1264px — semua ✓",p2t4:"✅ Email berlianiirisqi@gmail.com sudah terset di form handler script.js"};
   ["p2t1","p2t2","p2t3","p2t4"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p2notes[id]||"✅ Done"};changed=true;}});
+  // Phase 3 — About Me reviewed di browser (30 Okt 2026)
+  const p3notes={p3t1:"✅ Bio teks personal, institusi PHB/UHN, status kelulusan 2026, dan badges lokasi/kampus rapi",p3t2:"✅ Stats counter animasi (5+ Mobile, 4+ Web, 6+ AI/Data, 1 SINTA 4) berjalan smooth saat scroll ke About"};
+  ["p3t1","p3t2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p3notes[id]||"✅ Done"};changed=true;}});
+  // Phase 4 — Skills reviewed di browser (30 Okt 2026)
+  const p4notes={p4t1:"✅ 6 kategori skill lengkap & terstruktur: Mobile, Web, AI & Data, QA & Testing, Database, Tools & Design",p4t2:"✅ Hover effect micro-lift (-2px), background tint pink-soft, border glow, dan soft shadow aktif"};
+  ["p4t1","p4t2"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p4notes[id]||"✅ Done"};changed=true;}});
   if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
 }
 
