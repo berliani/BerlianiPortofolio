@@ -48,6 +48,9 @@ body {
 .bg-footer-gradient {
   background: linear-gradient(135deg, var(--pink-deep) 0%, #c24d70 50%, var(--sage-dark) 100%);
 }
+.bg-charcoal {
+  background-color: var(--charcoal) !important;
+}
 
 /* ── Navbar ── */
 .navbar {

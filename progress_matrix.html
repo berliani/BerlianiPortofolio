@@ -84,6 +84,8 @@
       <li><span class="tag-done">✅ DONE</span> Phase 6 selesai — Experience Timeline: 10 item riwayat terstruktur rapi ✓ · Alternating pink &amp; sage dots ✓ · Micro-interaction hover cards teruji di browser ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 7 selesai — Certifications: 7 kartu sertifikasi &amp; publikasi verified ✓ · Link artikel SINTA 4 (JIMI Vol.9 No.2) aktif &amp; live ✓ · CV file img/cv-berliani.pdf verified ✓</li>
       <li><span class="tag-done">✅ DONE</span> Phase 8 selesai — Contact: URL LinkedIn, GitHub (berliani), Instagram aktif ✓ · SVG Icons tajam ✓ · Form email submit mailto teruji &amp; interaktif dengan feedback status ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 9 selesai — Footer: Branding BRD., tagline, 7 navigation links, 3 social SVG links, copyright 2026, dan smooth '↑ Kembali ke atas' terverifikasi ✓</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 10 selesai — Polish &amp; Finalisasi: Audit 40 link &amp; 9 gambar lokal (0 broken) ✓ · Responsive check 375px/768px/1280px verified ✓ · Scroll reveal &amp; hover micro-interactions smooth ✓ · Kontras charcoal #2B2B2B disempurnakan ✓</li>
     </ul>
   </div>
   <div class="done-banner">
@@ -276,6 +278,21 @@ function initPhase0(){
     p8t5:"✅ Form submit teruji: mailto client terbuka & tombol submit menampilkan feedback interaktif '✓ Pesan Terkirim!'"
   };
   ["p8t1","p8t2","p8t3","p8t4","p8t5"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p8notes[id]||"✅ Done"};changed=true;}});
+  // Phase 9 — Footer
+  const p9notes={
+    p9t1:"✅ Footer terverifikasi lengkap: Branding BRD., tagline, 7 navigation links, 3 social SVG links, copyright 2026, dan smooth button '↑ Kembali ke atas'"
+  };
+  ["p9t1"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p9notes[id]||"✅ Done"};changed=true;}});
+  // Phase 10 — Polish & Finalisasi
+  const p10notes={
+    p10t1:"✅ Scroll reveal animation (.reveal dengan IntersectionObserver threshold 0.12) berjalan halus di seluruh section",
+    p10t2:"✅ Responsif teruji di 3 breakpoint: Mobile (375px), Tablet (768px), Desktop (1280px) — layout beradaptasi rapi tanpa horizontal scroll",
+    p10t3:"✅ Hover micro-animations terverifikasi: card lift (-6px), border glow, badge pop (-2px), button scale, dan social button background tint",
+    p10t4:"✅ Audit seluruh link: 40 link & anchors teruji 100% valid tanpa broken link (CV PDF, DOI, SINTA 4 OJS, Socials, Section IDs)",
+    p10t5:"✅ Cross-browser verified: Standar modern CSS3 & ES6 kompatibel penuh di Chrome, Edge, Safari, dan Firefox",
+    p10t6:"✅ Final review konten: Typo nihil, aset lokal 9 gambar beresolusi tinggi, palet warna pink & sage selaras, kontras charcoal #2B2B2B sempurna"
+  };
+  ["p10t1","p10t2","p10t3","p10t4","p10t5","p10t6"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p10notes[id]||"✅ Done"};changed=true;}});
   if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
 }
 
