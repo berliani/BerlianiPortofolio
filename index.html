@@ -818,7 +818,7 @@
             <span class="text-2xl">👑</span>
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
-                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_6_title">Ketua Himpunan Mahasiswa PTTI</h3>
+                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_6_title">Ketua Himpunan Mahasiswa HMPTI</h3>
                 <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2024</span>
               </div>
               <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
@@ -878,7 +878,7 @@
             <span class="text-2xl">📋</span>
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
-                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_10_title">Sekretaris Himpunan Mahasiswa PTTI</h3>
+                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_10_title">Sekretaris Himpunan Mahasiswa HMPTI</h3>
                 <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2023</span>
               </div>
               <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
@@ -982,16 +982,37 @@
   <!-- ════════════════════════════════════════
        ORGANISASI & AKTIVITAS (ACTIVITIES)
        ════════════════════════════════════════ -->
-  <section id="activities" class="py-20 bg-cream">
+  <section id="activities" class="py-20 bg-cream relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-5">
-      <div class="text-center mb-12 reveal">
+      <div class="text-center mb-10 reveal">
         <h2 class="section-title" data-i18n="activities_title">Organisasi & Aktivitas</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle mt-4" data-i18n="activities_subtitle">Dokumentasi kepemimpinan Himpunan Mahasiswa PTTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik</p>
+        <p class="section-subtitle mt-4" data-i18n="activities_subtitle">Dokumentasi kepemimpinan Himpunan Mahasiswa HMPTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik</p>
       </div>
 
-      <!-- Activities Grid (populated dynamically by script.js) -->
-      <div id="activitiesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Activities Carousel Slider -->
+      <div class="relative px-2 sm:px-12 reveal">
+        <!-- Slider Viewport -->
+        <div id="activitiesSliderViewport" class="overflow-hidden rounded-3xl p-1 cursor-grab active:cursor-grabbing select-none">
+          <div id="activitiesTrack" class="flex transition-transform duration-500 ease-out">
+            <!-- Slides rendered dynamically by script.js -->
+          </div>
+        </div>
+
+        <!-- Left Nav Arrow -->
+        <button id="actSliderPrev" class="absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/95 backdrop-blur-md shadow-lg border border-pink-soft/40 hover:bg-pink-soft text-charcoal hover:text-pink-deep flex items-center justify-center transition-all duration-200 cursor-pointer text-2xl font-bold hover:scale-110 z-20" aria-label="Previous Activity Slide">
+          ‹
+        </button>
+        <!-- Right Nav Arrow -->
+        <button id="actSliderNext" class="absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/95 backdrop-blur-md shadow-lg border border-pink-soft/40 hover:bg-pink-soft text-charcoal hover:text-pink-deep flex items-center justify-center transition-all duration-200 cursor-pointer text-2xl font-bold hover:scale-110 z-20" aria-label="Next Activity Slide">
+          ›
+        </button>
+      </div>
+
+      <!-- Slider Controls (Counter & Dots) -->
+      <div class="flex items-center justify-center gap-5 mt-8">
+        <span id="actSliderCounter" class="text-xs font-mono font-semibold text-gray-500 bg-white/90 px-3.5 py-1.5 rounded-full border border-pink-soft/30 shadow-xs">1 / 11</span>
+        <div id="actSliderDots" class="flex items-center gap-2"></div>
       </div>
     </div>
   </section>
@@ -1221,23 +1242,18 @@
         </button>
       </div>
 
-      <!-- Modal Body -->
-      <div class="p-6 space-y-4">
-        <div class="relative bg-charcoal/5 rounded-2xl overflow-hidden border border-pink-soft/30 flex items-center justify-center min-h-[300px] max-h-[64vh]">
-          <img id="modalActivityImg" src="" alt="Activity" class="w-full h-auto max-h-[60vh] object-contain transition-opacity duration-300" />
+      <!-- Modal Body (Only Photo & Nav buttons, NO descriptions) -->
+      <div class="p-4 sm:p-6">
+        <div class="relative bg-charcoal/5 rounded-2xl overflow-hidden border border-pink-soft/30 flex items-center justify-center min-h-[350px] max-h-[75vh]">
+          <img id="modalActivityImg" src="" alt="Activity" class="w-full h-auto max-h-[72vh] object-contain transition-opacity duration-300" />
           
           <!-- Nav Buttons -->
-          <button id="activityPrev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-charcoal hover:text-pink-deep shadow-md flex items-center justify-center transition-all cursor-pointer font-bold text-lg hover:scale-105 z-10" aria-label="Previous photo">
+          <button id="activityPrev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 hover:bg-white text-charcoal hover:text-pink-deep shadow-md flex items-center justify-center transition-all cursor-pointer font-bold text-xl hover:scale-105 z-10" aria-label="Previous photo">
             ‹
           </button>
-          <button id="activityNext" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-charcoal hover:text-pink-deep shadow-md flex items-center justify-center transition-all cursor-pointer font-bold text-lg hover:scale-105 z-10" aria-label="Next photo">
+          <button id="activityNext" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 hover:bg-white text-charcoal hover:text-pink-deep shadow-md flex items-center justify-center transition-all cursor-pointer font-bold text-xl hover:scale-105 z-10" aria-label="Next photo">
             ›
           </button>
-        </div>
-
-        <div class="bg-gradient-to-br from-pink-soft/20 via-cream to-sage-light/20 rounded-2xl p-5 border border-pink-soft/30">
-          <h3 id="modalActivityTitle" class="font-display text-lg md:text-xl font-bold text-charcoal leading-snug">Judul Kegiatan</h3>
-          <p id="modalActivityDesc" class="text-sm text-gray-600 mt-2 leading-relaxed">Deskripsi kegiatan dan peran kepemimpinan.</p>
         </div>
       </div>
     </div>

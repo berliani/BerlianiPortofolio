@@ -669,78 +669,56 @@ const ACTIVITIES_DATA = [
   {
     img: 'img/kegiatan/optimized/AZR06624.jpg',
     full: 'img/kegiatan/optimized/AZR06624.jpg',
-    title: { id: 'Ketua Himpunan Mahasiswa PTTI — Memimpin Rapat Kerja Organisasi', en: 'President of PTTI Student Association — Leading Work Plan Strategy' },
-    desc: { id: 'Memimpin rapat koordinasi strategis dan perencanaan program kerja tahunan Himpunan Mahasiswa PTTI.', en: 'Leading strategic coordination and departmental program planning for the PTTI Student Association.' },
     category: { id: 'Kepemimpinan', en: 'Leadership' }
   },
   {
     img: 'img/kegiatan/optimized/AZR08051.jpg',
     full: 'img/kegiatan/optimized/AZR08051.jpg',
-    title: { id: 'Sambutan & Pemaparan Program Himpunan Mahasiswa', en: 'Opening Remarks & Student Association Showcase' },
-    desc: { id: 'Pemaparan arah kerja organisasi dan sambutan resmi pada agenda formal kemahasiswaan.', en: 'Delivering opening address and presenting organizational roadmap during formal student events.' },
     category: { id: 'Kepemimpinan', en: 'Leadership' }
   },
   {
     img: 'img/kegiatan/optimized/DSC08118.jpg',
     full: 'img/kegiatan/optimized/DSC08118.jpg',
-    title: { id: 'Pelaksanaan Hibah POMN Kemendikbudristek — Edukasi & Pengabdian Masyarakat', en: 'POMN Ministry Grant — Community Empowerment & Tech Outreach' },
-    desc: { id: 'Kegiatan edukasi dan pemberdayaan masyarakat desa binaan dalam Program Ormawa Membangun Negeri.', en: 'Community tech education and empowerment initiatives under the national POMN grant program.' },
     category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
   },
   {
     img: 'img/kegiatan/optimized/HMS04592.jpg',
     full: 'img/kegiatan/optimized/HMS04592.jpg',
-    title: { id: 'Implementasi Lapangan POMN bersama Warga & Perangkat Desa', en: 'Field Implementation of POMN Grant with Village Leaders' },
-    desc: { id: 'Kolaborasi dan interaksi langsung dengan perangkat desa serta warga binaan program POMN.', en: 'Direct collaboration and engagement with rural village leaders and local beneficiary communities.' },
     category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20240811-WA0039.jpg',
     full: 'img/kegiatan/optimized/IMG-20240811-WA0039.jpg',
-    title: { id: 'Sinergi Ormawa Membangun Negeri (POMN 2024)', en: 'Synergy in Building the Nation — POMN Grant 2024' },
-    desc: { id: 'Dokumentasi tim pelaksana POMN Kemendikbudristek dalam pengabdian di lokasi sasaran.', en: 'Field documentation of the POMN executive committee during on-site community service outreach.' },
     category: { id: 'Hibah Nasional', en: 'National Grant' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20241021-WA0038.jpg',
     full: 'img/kegiatan/optimized/IMG-20241021-WA0038.jpg',
-    title: { id: 'Forum Riset Teknologi Informasi (FoRTI)', en: 'FoRTI IT Research Forum Discussion' },
-    desc: { id: 'Diskusi riset terapan teknologi informasi dan kajian literatur ilmiah bersama tim riset FoRTI.', en: 'Applied IT research deliberations and academic literature reviews with FoRTI research fellows.' },
     category: { id: 'Riset Akademik', en: 'Academic Research' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
     full: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
-    title: { id: 'Delegasi Mahasiswa & Presentasi Inovasi Teknologi', en: 'Student Delegation & Tech Innovation Showcase' },
-    desc: { id: 'Mewakili organisasi kemahasiswaan dalam forum presentasi dan expo inovasi teknologi.', en: 'Representing student organization in tech exhibition forums and innovation showcases.' },
     category: { id: 'Delegasi & Prestasi', en: 'Delegation' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20241117-WA0080.jpg',
     full: 'img/kegiatan/optimized/IMG-20241117-WA0080.jpg',
-    title: { id: 'Monitoring & Evaluasi Kegiatan Hibah Kemendikbudristek', en: 'Monitoring & Evaluation of Ministry Competitive Grants' },
-    desc: { id: 'Sesi pertanggungjawaban program kerja, monitoring kemajuan, dan evaluasi hasil kegiatan.', en: 'Accountability reporting, milestone monitoring, and program outcome evaluation session.' },
     category: { id: 'Akuntabilitas Hibah', en: 'Grant Governance' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
     full: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
-    title: { id: 'Gelar Karya Inovasi & Hasil Program Pengabdian', en: 'Student Innovation Exposition & Program Deliverables' },
-    desc: { id: 'Pameran hasil luaran pengabdian dan inovasi teknologi yang dikembangkan oleh tim mahasiswa.', en: 'Exposition of community service deliverables and tech solutions developed by student teams.' },
     category: { id: 'Ekspo & Gelar Karya', en: 'Exposition' }
   },
   {
     img: 'img/kegiatan/optimized/IMG_5879.jpg',
     full: 'img/kegiatan/optimized/IMG_5879.jpg',
-    title: { id: 'Musyawarah Besar & Regenerasi Kepengurusan Himpunan', en: 'Grand Assembly & Departmental Leadership Transition' },
-    desc: { id: 'Forum musyawarah tahunan pengurus dan estafet kepemimpinan Himpunan Mahasiswa PTTI.', en: 'Annual student parliament assembly and democratic succession of association leadership.' },
     category: { id: 'Regenerasi Organisasi', en: 'Governance' }
   },
   {
     img: 'img/kegiatan/optimized/P1030241.jpg',
     full: 'img/kegiatan/optimized/P1030241.jpg',
-    title: { id: 'Kebersamaan & Solidaritas Pengurus Himpunan Mahasiswa', en: 'Team Fellowship — PTTI Student Association' },
-    desc: { id: 'Solidaritas dan dedikasi rekan-rekan pengurus dalam menjalankan amanah organisasi kemahasiswaan.', en: 'Collegial camaraderie and dedicated teamwork across departmental student committee members.' },
     category: { id: 'Solidaritas Organisasi', en: 'Community' }
   }
 ];
@@ -1144,80 +1122,195 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === certModal) closeCertModalFunc();
   });
 
-  // ── 11. ACTIVITIES GALLERY & LIGHTBOX MODAL ──
-  const activitiesGrid       = document.getElementById('activitiesGrid');
+  // ── 11. ACTIVITIES CAROUSEL SLIDER & LIGHTBOX MODAL ──
+  const activitiesTrack      = document.getElementById('activitiesTrack');
+  const activitiesViewport   = document.getElementById('activitiesSliderViewport');
+  const actSliderPrev        = document.getElementById('actSliderPrev');
+  const actSliderNext        = document.getElementById('actSliderNext');
+  const actSliderDots        = document.getElementById('actSliderDots');
+  const actSliderCounter     = document.getElementById('actSliderCounter');
   const activityModal        = document.getElementById('activityModal');
   const closeActivityModal   = document.getElementById('closeActivityModal');
   const modalActivityImg     = document.getElementById('modalActivityImg');
-  const modalActivityTitle   = document.getElementById('modalActivityTitle');
-  const modalActivityDesc    = document.getElementById('modalActivityDesc');
   const modalActivityBadge   = document.getElementById('modalActivityBadge');
   const modalActivityCounter = document.getElementById('modalActivityCounter');
   const activityPrev         = document.getElementById('activityPrev');
   const activityNext         = document.getElementById('activityNext');
 
-  renderActivities = function() {
-    if (!activitiesGrid) return;
-    activitiesGrid.innerHTML = '';
-    ACTIVITIES_DATA.forEach((item, idx) => {
-      const title = item.title[currentLang] || item.title.id;
-      const desc = item.desc[currentLang] || item.desc.id;
-      const category = item.category[currentLang] || item.category.id;
-      const viewText = TRANSLATIONS[currentLang]?.activity_view || 'Lihat Foto Penuh ↗';
-      const badgeText = TRANSLATIONS[currentLang]?.activity_badge || 'Dokumentasi Kegiatan';
+  let currentActSlide = 0;
+  let actAutoplayTimer = null;
 
-      const card = document.createElement('div');
-      card.className = 'activity-card reveal group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pink-soft/30 cursor-pointer flex flex-col';
-      card.dataset.activityIdx = idx;
-      card.innerHTML = `
-        <div class="relative overflow-hidden bg-cream-dark h-56">
-          <img src="${item.img}" alt="${title}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-xs font-semibold flex items-center gap-1.5">${viewText}</span>
-          </div>
-          <span class="absolute top-3 left-3 text-xs bg-white/95 backdrop-blur-sm text-pink-deep px-3 py-1 rounded-full font-mono font-semibold shadow-sm">${category}</span>
-        </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-charcoal text-base group-hover:text-pink-deep transition-colors leading-snug">${title}</h3>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">${desc}</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-pink-soft/20 flex items-center justify-between text-xs text-pink-deep font-semibold">
-            <span>${badgeText}</span>
-            <span>📸</span>
+  function getCardsPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+  }
+
+  function getMaxSlideIdx() {
+    return Math.max(0, ACTIVITIES_DATA.length - getCardsPerView());
+  }
+
+  function updateSliderPosition(animate = true) {
+    if (!activitiesTrack) return;
+    const cardsPerView = getCardsPerView();
+    const maxIdx = getMaxSlideIdx();
+    if (currentActSlide > maxIdx) currentActSlide = maxIdx;
+    if (currentActSlide < 0) currentActSlide = 0;
+
+    const stepPercent = 100 / cardsPerView;
+    activitiesTrack.style.transition = animate ? 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+    activitiesTrack.style.transform = `translateX(-${currentActSlide * stepPercent}%)`;
+
+    // Update dots
+    if (actSliderDots) {
+      const dots = actSliderDots.querySelectorAll('.slider-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentActSlide);
+      });
+    }
+
+    // Update counter
+    if (actSliderCounter) {
+      actSliderCounter.textContent = `${currentActSlide + 1} / ${maxIdx + 1}`;
+    }
+  }
+
+  function goToActSlide(idx) {
+    const maxIdx = getMaxSlideIdx();
+    if (idx < 0) {
+      currentActSlide = maxIdx;
+    } else if (idx > maxIdx) {
+      currentActSlide = 0;
+    } else {
+      currentActSlide = idx;
+    }
+    updateSliderPosition(true);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    actAutoplayTimer = setInterval(() => {
+      goToActSlide(currentActSlide + 1);
+    }, 4000);
+  }
+
+  function stopAutoplay() {
+    if (actAutoplayTimer) {
+      clearInterval(actAutoplayTimer);
+      actAutoplayTimer = null;
+    }
+  }
+
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  renderActivities = function() {
+    if (!activitiesTrack) return;
+    activitiesTrack.innerHTML = '';
+    
+    ACTIVITIES_DATA.forEach((item, idx) => {
+      const category = item.category[currentLang] || item.category.id;
+      const viewText = TRANSLATIONS[currentLang]?.activity_view || 'Perbesar Foto ↗';
+
+      const slide = document.createElement('div');
+      slide.className = 'w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 p-2 sm:p-2.5 box-border';
+      slide.innerHTML = `
+        <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pink-soft/30 bg-white cursor-pointer h-72 sm:h-80 select-none flex flex-col" data-activity-idx="${idx}">
+          <div class="relative w-full h-full overflow-hidden bg-cream-dark">
+            <img src="${item.img}" alt="${category}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <!-- Hover overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4 pointer-events-none">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5">${viewText}</span>
+              <span class="text-white/90 text-sm">🔍</span>
+            </div>
+            <!-- Category Badge only (No descriptions) -->
+            <div class="absolute top-3.5 left-3.5 pointer-events-none">
+              <span class="text-xs font-mono font-semibold bg-white/95 backdrop-blur-md text-pink-deep px-3.5 py-1.5 rounded-full shadow-md border border-pink-soft/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-pink-deep"></span>
+                ${category}
+              </span>
+            </div>
           </div>
         </div>
       `;
-      card.addEventListener('click', () => openActivityModal(idx));
-      activitiesGrid.appendChild(card);
-
-      if (typeof observerReveal !== 'undefined' && observerReveal) {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          card.classList.add('visible');
-        } else {
-          observerReveal.observe(card);
-        }
-      } else {
-        card.classList.add('visible');
-      }
+      slide.querySelector('.group').addEventListener('click', () => openActivityModal(idx));
+      activitiesTrack.appendChild(slide);
     });
+
+    // Render Dots
+    if (actSliderDots) {
+      actSliderDots.innerHTML = '';
+      const maxIdx = getMaxSlideIdx();
+      for (let i = 0; i <= maxIdx; i++) {
+        const dot = document.createElement('button');
+        dot.className = `slider-dot ${i === currentActSlide ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => {
+          goToActSlide(i);
+          resetAutoplay();
+        });
+        actSliderDots.appendChild(dot);
+      }
+    }
+
+    updateSliderPosition(false);
   };
+
+  // Slider navigation listeners
+  actSliderPrev?.addEventListener('click', () => {
+    goToActSlide(currentActSlide - 1);
+    resetAutoplay();
+  });
+  actSliderNext?.addEventListener('click', () => {
+    goToActSlide(currentActSlide + 1);
+    resetAutoplay();
+  });
+
+  // Autoplay pause on hover
+  activitiesViewport?.addEventListener('mouseenter', stopAutoplay);
+  activitiesViewport?.addEventListener('mouseleave', startAutoplay);
+
+  // Touch Swipe for Mobile
+  let touchStartX = 0;
+  activitiesViewport?.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  activitiesViewport?.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        goToActSlide(currentActSlide + 1);
+      } else {
+        goToActSlide(currentActSlide - 1);
+      }
+    }
+    startAutoplay();
+  }, { passive: true });
+
+  // Handle window resize
+  let actResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(actResizeTimer);
+    actResizeTimer = setTimeout(() => {
+      renderActivities();
+    }, 150);
+  });
 
   function showActivitySlide(idx) {
     if (!ACTIVITIES_DATA.length || !modalActivityImg) return;
     activeActivityIdx = (idx + ACTIVITIES_DATA.length) % ACTIVITIES_DATA.length;
     const item = ACTIVITIES_DATA[activeActivityIdx];
-    const title = item.title[currentLang] || item.title.id;
-    const desc = item.desc[currentLang] || item.desc.id;
     const category = item.category[currentLang] || item.category.id;
 
     modalActivityImg.style.opacity = '0';
     setTimeout(() => {
       modalActivityImg.src = item.full || item.img;
-      modalActivityImg.alt = title;
-      if (modalActivityTitle) modalActivityTitle.textContent = title;
-      if (modalActivityDesc) modalActivityDesc.textContent = desc;
+      modalActivityImg.alt = category;
       if (modalActivityBadge) modalActivityBadge.textContent = category;
       if (modalActivityCounter) modalActivityCounter.textContent = `${activeActivityIdx + 1} / ${ACTIVITIES_DATA.length}`;
       modalActivityImg.style.opacity = '1';
@@ -1226,6 +1319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openActivityModal(idx) {
     if (!activityModal) return;
+    stopAutoplay();
     showActivitySlide(idx);
     activityModal.classList.add('modal-active');
     document.body.style.overflow = 'hidden';
@@ -1235,6 +1329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activeActivityIdx = null;
     activityModal?.classList.remove('modal-active');
     document.body.style.overflow = '';
+    startAutoplay();
   }
 
   refreshActiveActivityModal = () => {
@@ -1256,8 +1351,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === activityModal) closeActivityModalFunc();
   });
 
-  // Render initial activities
+  // Render initial activities & start autoplay
   renderActivities();
+  startAutoplay();
 
   // Global ESC key to close any open modal & Arrow keys for sliders
   window.addEventListener('keydown', (e) => {

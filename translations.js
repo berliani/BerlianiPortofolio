@@ -73,7 +73,7 @@ const TRANSLATIONS = {
     exp_4_desc: "Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT ISG.",
     exp_5_title: "Project Based Internship — Home Credit",
     exp_5_desc: "Analisis risiko kredit dan pemodelan machine learning pada dataset Home Credit Default Risk.",
-    exp_6_title: "Ketua Himpunan Mahasiswa PTTI",
+    exp_6_title: "Ketua Himpunan Mahasiswa HMPTI",
     exp_6_desc: "Memimpin organisasi himpunan mahasiswa program studi, mengkoordinir kegiatan akademik dan non-akademik anggota.",
     exp_7_title: "Pendanaan POMN — Program Ormawa Membangun Negeri",
     exp_7_desc: "Lolos pendanaan Program Ormawa Membangun Negeri (POMN) dari Kemendikbudristek RI.",
@@ -81,7 +81,7 @@ const TRANSLATIONS = {
     exp_8_desc: "Anggota staf riset di Forum Riset Teknologi Informasi (FoRTI), berkontribusi dalam penelitian di bidang teknologi informasi.",
     exp_9_title: "Pendanaan PKM-KC — Program Kreativitas Mahasiswa",
     exp_9_desc: "Lolos seleksi dan mendapatkan pendanaan PKM-KC dari Kemendikbudristek RI untuk pengembangan inovasi teknologi.",
-    exp_10_title: "Sekretaris Himpunan Mahasiswa PTTI",
+    exp_10_title: "Sekretaris Himpunan Mahasiswa HMPTI",
     exp_10_desc: "Bertanggung jawab dalam pengelolaan administrasi, dokumentasi, dan korespondensi organisasi himpunan mahasiswa.",
 
     // Certifications
@@ -96,9 +96,9 @@ const TRANSLATIONS = {
 
     // Activities & Leadership
     activities_title: "Organisasi & Aktivitas",
-    activities_subtitle: "Dokumentasi kepemimpinan Himpunan Mahasiswa PTTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik",
-    activity_badge: "Dokumentasi Kegiatan",
-    activity_view: "Lihat Foto Penuh ↗",
+    activities_subtitle: "Dokumentasi kepemimpinan Himpunan Mahasiswa HMPTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik",
+    activity_badge: "Kategori",
+    activity_view: "Perbesar Foto ↗",
 
     // Contact
     contact_title: "Mari Terhubung",
@@ -195,7 +195,7 @@ const TRANSLATIONS = {
     exp_4_desc: "Led agile sprint task management and engineered multi-tenant SaaS village governance platform integrated with BUMDes Point of Sale (POS) at PT ISG.",
     exp_5_title: "Project Based Internship — Home Credit Indonesia",
     exp_5_desc: "Credit risk analysis and machine learning predictive modeling on Home Credit Default Risk dataset.",
-    exp_6_title: "President / Chairperson — PTTI Student Association",
+    exp_6_title: "President / Chairperson — HMPTI Student Association",
     exp_6_desc: "Led department student organization, coordinating academic workgroups and member tech development initiatives.",
     exp_7_title: "POMN National Funding Grant — Kemendikbudristek RI",
     exp_7_desc: "Awarded competitive national community-building grant from Ministry of Education, Culture, Research, and Technology RI.",
@@ -203,7 +203,7 @@ const TRANSLATIONS = {
     exp_8_desc: "Research staff member at FoRTI, actively conducting applied research and literature studies in computer science.",
     exp_9_title: "PKM-KC National Innovation Funding — Kemendikbudristek RI",
     exp_9_desc: "Secured competitive Student Creativity Program grant from Kemendikbudristek RI for technological innovation.",
-    exp_10_title: "Secretary General — PTTI Student Association",
+    exp_10_title: "Secretary General — HMPTI Student Association",
     exp_10_desc: "Managed organizational correspondence, official records, meeting documentation, and administrative affairs.",
 
     // Certifications
@@ -218,8 +218,8 @@ const TRANSLATIONS = {
 
     // Activities & Leadership
     activities_title: "Leadership & Activities",
-    activities_subtitle: "Documentation of student association leadership, competitive national grants (POMN & PKM Kemendikbudristek), and academic initiatives",
-    activity_badge: "Activity Gallery",
+    activities_subtitle: "Documentation of student association leadership (HMPTI), competitive national grants (POMN & PKM Kemendikbudristek), and academic initiatives",
+    activity_badge: "Category",
     activity_view: "View Full Photo ↗",
 
     // Contact
