@@ -415,3 +415,27 @@ body {
   box-shadow: 0 0 0 3px rgba(212, 95, 130, 0.12);
 }
 .form-input::placeholder { color: #bbb; }
+
+/* ── Modals & Sliders ── */
+.modal-active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.modal-active > div {
+  transform: scale(1) !important;
+}
+.slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 99px;
+  background: #E8E8E8;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.slider-dot.active {
+  width: 24px;
+  background: var(--pink-deep);
+}
+.project-card, .cert-card {
+  cursor: pointer;
+}
