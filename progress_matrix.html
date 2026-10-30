@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📋 Build Matrix v3 — Berliani Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--pink-blush:#F2A7BE;--pink-soft:#FAD4E0;--pink-deep:#D45F82;--sage:#8BAF84;--sage-light:#C8DEC5;--sage-dark:#4E7247;--cream:#FDFAF6;--white:#FFFFFF;--charcoal:#2B2B2B;--gray-100:#F5F5F5;--gray-200:#E8E8E8;--gray-400:#A0A0A0;--gray-600:#666666;--shadow:0 2px 12px rgba(0,0,0,0.07);--shadow-md:0 4px 20px rgba(0,0,0,0.10);}
+    *{box-sizing:border-box;margin:0;padding:0;}body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal);min-height:100vh;}
+    header{background:linear-gradient(135deg,var(--pink-deep) 0%,var(--pink-blush) 50%,var(--sage) 100%);color:white;padding:2rem 1.5rem 1.5rem;text-align:center;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-md);}
+    header h1{font-size:clamp(1rem,3vw,1.5rem);font-weight:700;letter-spacing:-0.02em;}header p{font-size:0.75rem;opacity:0.88;margin-top:0.2rem;font-weight:300;}
+    .progress-wrap{background:rgba(255,255,255,0.25);border-radius:99px;height:10px;margin:0.8rem auto 0;max-width:480px;overflow:hidden;}
+    .progress-fill{height:100%;background:white;border-radius:99px;transition:width 0.5s cubic-bezier(.4,0,.2,1);min-width:2px;}
+    .progress-label{font-size:0.7rem;opacity:0.9;margin-top:0.3rem;font-family:'DM Mono',monospace;}
+    .changelog{background:#FFF8E1;border-left:4px solid #FFB300;margin:1rem 0;border-radius:0 10px 10px 0;padding:0.7rem 1rem;font-size:0.73rem;color:#5D4037;}
+    .changelog strong{display:block;margin-bottom:0.3rem;color:#E65100;}.changelog ul{margin-left:1.1rem;line-height:1.9;}
+    .tag-removed{color:#C62828;background:#FFEBEE;padding:0.1rem 0.4rem;border-radius:4px;font-weight:600;}
+    .tag-added{color:#1B5E20;background:#E8F5E9;padding:0.1rem 0.4rem;border-radius:4px;font-weight:600;}
+    .tag-done{color:#fff;background:#4CAF50;padding:0.1rem 0.5rem;border-radius:4px;font-weight:700;font-size:0.68rem;}
+    main{max-width:900px;margin:0 auto;padding:1.5rem 1rem 3rem;}
+    .summary-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:1.5rem;}
+    .summary-card{background:var(--white);border-radius:14px;padding:0.85rem 1rem;text-align:center;box-shadow:var(--shadow);border-top:3px solid transparent;}
+    .summary-card.done{border-color:var(--sage);}.summary-card.wip{border-color:var(--pink-blush);}.summary-card.block{border-color:#F4A261;}.summary-card.todo{border-color:var(--gray-200);}
+    .summary-card .num{font-size:1.5rem;font-weight:700;line-height:1;}.summary-card .lbl{font-size:0.65rem;color:var(--gray-600);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.06em;}
+    .summary-card.done .num{color:var(--sage-dark);}.summary-card.wip .num{color:var(--pink-deep);}.summary-card.block .num{color:#E76F00;}.summary-card.todo .num{color:var(--gray-400);}
+    .last-updated{font-size:0.7rem;color:var(--gray-400);font-family:'DM Mono',monospace;text-align:right;margin-bottom:1rem;}
+    .phase{background:var(--white);border-radius:16px;box-shadow:var(--shadow);margin-bottom:0.85rem;overflow:hidden;border:1px solid var(--gray-200);transition:box-shadow 0.2s;}
+    .phase:hover{box-shadow:var(--shadow-md);}.phase.phase-complete{border-color:var(--sage);border-left:4px solid var(--sage);}
+    .phase-header{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 1.2rem;cursor:pointer;user-select:none;gap:0.75rem;border-bottom:1px solid transparent;transition:background 0.15s;}
+    .phase-header:hover{background:var(--gray-100);}.phase-header.open{border-bottom-color:var(--gray-200);}
+    .phase-left{display:flex;align-items:center;gap:0.55rem;flex:1;min-width:0;}.phase-icon{font-size:1.1rem;flex-shrink:0;}
+    .phase-title{font-size:0.88rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .phase-right{display:flex;align-items:center;gap:0.55rem;flex-shrink:0;}
+    .phase-pct{font-size:0.72rem;font-family:'DM Mono',monospace;color:var(--gray-600);white-space:nowrap;}
+    .chevron{font-size:0.72rem;color:var(--gray-400);transition:transform 0.25s;}.phase.open .chevron{transform:rotate(180deg);}
+    .mini-bar-wrap{width:70px;height:6px;background:var(--gray-200);border-radius:99px;overflow:hidden;flex-shrink:0;}
+    .mini-bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--pink-blush),var(--sage));transition:width 0.4s;}
+    .task-body{padding:0.4rem 0;}
+    .task-row{display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:0.6rem;padding:0.55rem 1.2rem;transition:background 0.15s;}
+    .task-row:hover{background:var(--gray-100);}
+    .task-check{width:17px;height:17px;accent-color:var(--pink-deep);cursor:pointer;margin-top:2px;flex-shrink:0;}
+    .task-info{min-width:0;}.task-name{font-size:0.81rem;font-weight:500;line-height:1.4;}.task-name.done-text{text-decoration:line-through;color:var(--gray-400);}
+    .task-sub{font-size:0.7rem;color:var(--gray-600);margin-top:0.1rem;line-height:1.4;}
+    .notes-toggle{font-size:0.63rem;color:var(--gray-400);cursor:pointer;margin-top:0.28rem;display:inline-flex;align-items:center;gap:0.2rem;transition:color 0.15s;}
+    .notes-toggle:hover{color:var(--pink-deep);}.notes-toggle.has-note{color:#E76F00;font-weight:600;}
+    .notes-box{display:none;margin-top:0.35rem;}.notes-box.visible{display:block;}
+    .notes-textarea{width:100%;font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--charcoal);background:#FFF9F0;border:1px solid #F4A261;border-radius:8px;padding:0.45rem 0.6rem;resize:vertical;min-height:58px;outline:none;transition:border-color 0.15s;}
+    .notes-textarea:focus{border-color:var(--pink-deep);background:white;}
+    .badge{font-size:0.6rem;font-family:'DM Mono',monospace;padding:0.2rem 0.5rem;border-radius:99px;white-space:nowrap;font-weight:500;cursor:pointer;transition:all 0.15s;border:1.5px solid transparent;}
+    .badge.todo{background:var(--gray-100);color:var(--gray-600);border-color:var(--gray-200);}.badge.wip{background:var(--pink-soft);color:var(--pink-deep);border-color:var(--pink-blush);}
+    .badge.done{background:var(--sage-light);color:var(--sage-dark);border-color:var(--sage);}.badge.blocked{background:#FFF0E0;color:#E76F00;border-color:#F4A261;}.badge:hover{filter:brightness(0.95);}
+    .task-sep{height:1px;background:var(--gray-100);margin:0 1.2rem;}
+    .legend{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;}.legend span{font-size:0.68rem;color:var(--gray-600);}
+    .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;}
+    .btn-sm{font-size:0.7rem;padding:0.38rem 0.8rem;border-radius:99px;border:1.5px solid var(--gray-200);background:white;cursor:pointer;font-family:'Inter',sans-serif;color:var(--gray-600);transition:all 0.15s;}
+    .btn-sm:hover{border-color:var(--pink-blush);color:var(--pink-deep);}.btn-sm.danger:hover{border-color:#E57373;color:#C62828;}
+    .done-banner{background:linear-gradient(135deg,var(--sage-light),var(--cream));border:2px solid var(--sage);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:0.75rem;}
+    .done-banner .icon{font-size:1.8rem;flex-shrink:0;}.done-banner h3{font-size:0.9rem;font-weight:700;color:var(--sage-dark);}
+    .done-banner p{font-size:0.73rem;color:var(--gray-600);margin-top:0.2rem;line-height:1.6;}
+    .done-banner code{font-family:'DM Mono',monospace;background:white;padding:0.1rem 0.4rem;border-radius:4px;font-size:0.68rem;color:var(--pink-deep);}
+    @media(max-width:480px){.task-row{grid-template-columns:auto 1fr;}.badge{display:none;}.mini-bar-wrap{width:48px;}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>📋 Build Matrix v3 — Portfolio Berliani Risqi</h1>
+  <p>Track progress · Auto-save · Siap deploy ke GitHub Pages / Netlify</p>
+  <div class="progress-wrap"><div class="progress-fill" id="globalBar" style="width:0%"></div></div>
+  <div class="progress-label" id="globalLabel">0 / 0 task selesai</div>
+</header>
+<main>
+  <div class="changelog">
+    <strong>📝 Changelog v3 — 30 Okt 2026</strong>
+    <ul>
+      <li><span class="tag-removed">REMOVED</span> See4Me &amp; WKJ dari Penelitian Dosen</li>
+      <li><span class="tag-added">ADDED</span> Experience: Sekretaris Himpunan PTTI (2023), Ketua Himpunan PTTI (2024), Research Staff FoRTI (2024)</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 0 dieksekusi — folder <code>D:\kulyah\BerlianiPortfolio\</code> dibuat, git init &amp; commit pertama</li>
+      <li><span class="tag-done">✅ DONE</span> Phase 1 selesai — Navbar sticky ✓ · Hamburger mobile ✓ · Active scroll highlight ✓ · CV PDF dicopy ke <code>img/cv-berliani.pdf</code></li>
+      <li><span class="tag-done">✅ DONE</span> Phase 2 selesai — Hero Section: Foto profil rounded + gradient ring ✓ · 5 floating badges smooth ✓ · Responsif mobile/desktop verified ✓ · Email verified ✓</li>
+    </ul>
+  </div>
+  <div class="done-banner">
+    <div class="icon">🚀</div>
+    <div>
+      <h3>Phase 0 Selesai! Project siap dilanjutkan</h3>
+      <p>📁 Folder: <code>D:\kulyah\BerlianiPortfolio\</code><br/>
+      📄 File: <code>index.html</code> · <code>style.css</code> · <code>script.js</code> · <code>README.md</code> · <code>img/profile.jpg</code><br/>
+      🐙 Git: commit pertama sudah tersimpan (master branch)<br/>
+      🌐 Deploy: ikuti panduan di <code>README.md</code> → GitHub Pages atau Netlify (gratis!)</p>
+    </div>
+  </div>
+  <div class="summary-strip">
+    <div class="summary-card done"><div class="num" id="cnt-done">0</div><div class="lbl">✅ Done</div></div>
+    <div class="summary-card wip"><div class="num" id="cnt-wip">0</div><div class="lbl">🔄 In Progress</div></div>
+    <div class="summary-card block"><div class="num" id="cnt-block">0</div><div class="lbl">🚧 Blocked</div></div>
+    <div class="summary-card todo"><div class="num" id="cnt-todo">0</div><div class="lbl">⬜ Todo</div></div>
+  </div>
+  <div class="toolbar">
+    <div class="legend"><span>Klik badge ganti status →</span><span class="badge todo">todo</span><span class="badge wip">in progress</span><span class="badge done">done</span><span class="badge blocked">blocked</span></div>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+      <button class="btn-sm" onclick="expandAll()">Expand All</button>
+      <button class="btn-sm" onclick="collapseAll()">Collapse All</button>
+      <button class="btn-sm danger" onclick="resetAll()">Reset Data</button>
+    </div>
+  </div>
+  <div class="last-updated" id="lastUpdated">Belum ada perubahan</div>
+  <div id="phases"></div>
+</main>
+<script>
+const PHASES=[
+  {id:"p0",icon:"⚙️",title:"Phase 0 — Setup & Struktur File",tasks:[
+    {id:"p0t1",name:"Buat folder baru D:\\kulyah\\BerlianiPortfolio (deploy-ready)",sub:""},
+    {id:"p0t2",name:"index.html — Tailwind CDN Play + semua section skeleton",sub:""},
+    {id:"p0t3",name:"style.css — CSS tokens, animasi, component styles",sub:""},
+    {id:"p0t4",name:"script.js — Navbar, filter, scroll, form",sub:""},
+    {id:"p0t5",name:"img/profile.jpg — Copy dari IMG_3371.jpg",sub:""},
+    {id:"p0t6",name:"Import Google Fonts (Playfair Display + Inter + DM Mono)",sub:""},
+    {id:"p0t7",name:"CSS custom color tokens di :root",sub:""},
+    {id:"p0t8",name:"README.md dengan panduan deploy GitHub Pages & Netlify",sub:""},
+    {id:"p0t9",name:"git init + commit pertama (master branch)",sub:"feat: initial portfolio website - Phase 0 complete"},
+  ]},
+  {id:"p1",icon:"🔝",title:"Phase 1 — Navbar (Review & Update Data Pribadi)",tasks:[
+    {id:"p1t1",name:"Buka index.html di browser, cek tampilan navbar sticky",sub:""},
+    {id:"p1t2",name:"Test hamburger menu mobile (Chrome DevTools device mode)",sub:""},
+    {id:"p1t3",name:"Test active nav highlight saat scroll per section",sub:""},
+    {id:"p1t4",name:"Update link Download CV di navbar (href ke file CV)",sub:"Rename Portofolio_Berliani Risqi.pdf → img/cv-berliani.pdf"},
+  ]},
+  {id:"p2",icon:"🌟",title:"Phase 2 — Hero Section (Review & Update)",tasks:[
+    {id:"p2t1",name:"Cek foto profil tampil rounded + gradient border",sub:"Pastikan img/profile.jpg terbaca"},
+    {id:"p2t2",name:"Cek 5 floating badges animasi berjalan smooth",sub:"Flutter, Python, AI/ML, QA Testing, SINTA 4"},
+    {id:"p2t3",name:"Test responsif hero di mobile & desktop",sub:""},
+    {id:"p2t4",name:"Update email di script.js untuk form submit",sub:"berlianiirisqi@gmail.com — sesuaikan jika berbeda"},
+  ]},
+  {id:"p3",icon:"👩‍💻",title:"Phase 3 — About Me (Edit Konten)",tasks:[
+    {id:"p3t1",name:"Edit teks bio sesuai preferensi pribadi",sub:"3–4 kalimat sudah ada di HTML"},
+    {id:"p3t2",name:"Cek stats counter animasi saat scroll ke About",sub:"Angka 5+, 4+, 6+, 1 harus counter saat visible"},
+  ]},
+  {id:"p4",icon:"🛠️",title:"Phase 4 — Skills (Review & Tambah jika perlu)",tasks:[
+    {id:"p4t1",name:"Review 6 kategori skill — tambah/hapus sesuai kebutuhan",sub:"Mobile, Web, AI, QA, DB, Tools"},
+    {id:"p4t2",name:"Cek hover effect skill badge",sub:""},
+  ]},
+  {id:"p5a",icon:"📱",title:"Phase 5A — Projects Mobile (Review + Screenshot)",tasks:[
+    {id:"p5at1",name:"Cek 4 card Mobile + filter tab berfungsi",sub:"FoodPlan, Bicaraku, Tuntun, Secret App"},
+    {id:"p5at2",name:"Tambah screenshot FoodPlan → img/projects/foodplan.jpg",sub:"D:\\kulyah\\01.TUGAS\\smt5\\capstone"},
+    {id:"p5at3",name:"Tambah logo/screenshot Bicaraku → img/projects/bicaraku.jpg",sub:"D:\\kulyah\\01.TUGAS\\smt6\\capstone\\logo_bicaraku.png"},
+    {id:"p5at4",name:"Tambah screenshot Tuntun → img/projects/tuntun.jpg",sub:"D:\\kulyah\\01.TUGAS\\smt7\\01. TUGAS AKHIR\\tuntun"},
+    {id:"p5at5",name:"Update project-thumb-placeholder jadi <img> setelah ada screenshot",sub:"Ganti div placeholder dengan tag img di index.html"},
+  ]},
+  {id:"p5b",icon:"🌐",title:"Phase 5B — Projects Web (Review)",tasks:[
+    {id:"p5bt1",name:"Cek 2 card Web + filter tab berfungsi",sub:"FoodPlan Dashboard, Bicaraku Dashboard"},
+    {id:"p5bt2",name:"Tambah screenshot FoodPlan Web → img/projects/foodplan-web.jpg",sub:""},
+  ]},
+  {id:"p5c",icon:"🔬",title:"Phase 5C — Projects Penelitian Dosen (Review)",tasks:[
+    {id:"p5ct1",name:"Cek 3 card Penelitian Dosen + filter tab berfungsi",sub:"Lokantara Web, Lokantara Mobile, Lokantara AI"},
+    {id:"p5ct2",name:"Tambah logo/screenshot Lokantara jika tersedia",sub:"D:\\kulyah\\01.TUGAS\\penelitian dosen\\ATLANTARA\\lokantara-mobile\\assets"},
+  ]},
+  {id:"p5d",icon:"🤖",title:"Phase 5D — Projects AI & Data (Review)",tasks:[
+    {id:"p5dt1",name:"Cek 6 card AI + filter berfungsi",sub:"CNN, RAG, Home Credit, Pose Detection, Looker, Scraping"},
+    {id:"p5dt2",name:"Tambah link DOI ke card CNN Food Detection",sub:"href: https://doi.org/10.35316/.v9i2.6384"},
+    {id:"p5dt3",name:"Pastikan badge 'Publikasi SINTA 4' tampil di card CNN",sub:""},
+  ]},
+  {id:"p5e",icon:"🧪",title:"Phase 5E — Projects QA (Review)",tasks:[
+    {id:"p5et1",name:"Cek 3 card QA + filter berfungsi",sub:"QA FoodPlan, QA Bicaraku, API Testing"},
+  ]},
+  {id:"p5f",icon:"🎮",title:"Phase 5F — Game Dev (Review + Logo)",tasks:[
+    {id:"p5ft1",name:"Cek card Numbra Rush + filter berfungsi",sub:""},
+    {id:"p5ft2",name:"Tambah logo Numbra Rush → img/projects/numbrarush.jpg",sub:"D:\\kulyah\\01.TUGAS\\smt6\\game dev\\logo_numbrarush.png"},
+  ]},
+  {id:"p5g",icon:"⚡",title:"Phase 5G — Filter Logic (Test Menyeluruh)",tasks:[
+    {id:"p5gt1",name:"Test semua 7 filter tab: All, Mobile, Web, AI, QA, Game Dev, Penelitian Dosen",sub:"Klik satu-satu, hitung card yang muncul"},
+    {id:"p5gt2",name:"Test animasi cardReveal saat ganti tab",sub:""},
+    {id:"p5gt3",name:"Cek responsive card grid (1 col mobile, 2 tablet, 3 desktop)",sub:""},
+  ]},
+  {id:"p6",icon:"🏆",title:"Phase 6 — Experience Timeline (Review & Edit Teks)",tasks:[
+    {id:"p6t1",name:"Review 10 item timeline sudah benar semua",sub:"TA, Publikasi, Riset Dosen, KPI, PBI, Ketua, POMN, FoRTI, PKM-KC, Sekretaris"},
+    {id:"p6t2",name:"Edit deskripsi sesuai preferensi",sub:""},
+    {id:"p6t3",name:"Cek alternating dot warna pink/sage",sub:""},
+  ]},
+  {id:"p7",icon:"📜",title:"Phase 7 — Certifications (Review + Copy CV)",tasks:[
+    {id:"p7t1",name:"Cek 7 kartu sertifikat tampil benar",sub:"Publikasi, BNSP, Huawei, Digitalent, MySkill, Coursera, PBI"},
+    {id:"p7t2",name:"Verifikasi link artikel SINTA 4",sub:"https://journal.ibrahimy.ac.id/index.php/JIMI/article/view/6384"},
+    {id:"p7t3",name:"Copy CV ke img/cv-berliani.pdf",sub:"D:\\kulyah\\Portofolio_Berliani Risqi.pdf → rename & copy"},
+  ]},
+  {id:"p8",icon:"📬",title:"Phase 8 — Contact (Update Social Media & Email)",tasks:[
+    {id:"p8t1",name:"Update URL LinkedIn di index.html",sub:"Ganti href='https://linkedin.com' dengan URL profil asli"},
+    {id:"p8t2",name:"Update URL GitHub di index.html",sub:"Ganti href='https://github.com' dengan URL profil asli"},
+    {id:"p8t3",name:"Update URL Instagram di index.html",sub:""},
+    {id:"p8t4",name:"Update email di script.js (contactForm submit ~baris 55)",sub:""},
+    {id:"p8t5",name:"Test form submit → pastikan mailto client email terbuka",sub:""},
+  ]},
+  {id:"p9",icon:"🦶",title:"Phase 9 — Footer (Review)",tasks:[
+    {id:"p9t1",name:"Cek footer tampil: BRD., tagline, quick links, copyright 2026",sub:""},
+  ]},
+  {id:"p10",icon:"✨",title:"Phase 10 — Polish & Finalisasi",tasks:[
+    {id:"p10t1",name:"Scroll animations .reveal berjalan di semua section",sub:"Semua .reveal sudah ada di HTML"},
+    {id:"p10t2",name:"Responsive check: 375px · 768px · 1280px",sub:"Chrome DevTools Toggle Device Toolbar"},
+    {id:"p10t3",name:"Hover micro-animations: card lift, badge pop, button shine",sub:""},
+    {id:"p10t4",name:"Test semua link: nav, CTA, social, download, DOI",sub:""},
+    {id:"p10t5",name:"Cross-browser: Chrome & Edge minimal",sub:""},
+    {id:"p10t6",name:"Final review konten: typo, data, link tidak broken",sub:""},
+  ]},
+  {id:"p11",icon:"🚀",title:"Phase 11 — DEPLOY ke Hosting Gratis",tasks:[
+    {id:"p11t1",name:"Buat/login akun GitHub",sub:"github.com"},
+    {id:"p11t2",name:"Buat repository baru di GitHub (Public)",sub:"Nama repo: berliani-portfolio atau sesuai keinginan"},
+    {id:"p11t3",name:"git remote add origin + git push ke GitHub",sub:"Lihat panduan lengkap di D:\\kulyah\\BerlianiPortfolio\\README.md"},
+    {id:"p11t4",name:"Aktifkan GitHub Pages: Settings → Pages → main → Save",sub:"URL: username.github.io/berliani-portfolio"},
+    {id:"p11t5",name:"Tunggu ~1-2 menit, buka URL GitHub Pages, cek semua section",sub:""},
+    {id:"p11t6",name:"(Opsional) Deploy ke Netlify — drag & drop folder",sub:"netlify.com/drop → lebih cepat, URL random netlify"},
+    {id:"p11t7",name:"(Opsional) Custom domain jika punya",sub:"GitHub Pages Settings → Custom Domain"},
+  ]},
+];
+
+const SK="berliani_matrix_v3";
+function loadState(){try{return JSON.parse(localStorage.getItem(SK))||{};}catch{return{};}}
+function saveState(s){localStorage.setItem(SK,JSON.stringify(s));}
+const STATUS_CYCLE=["todo","wip","done","blocked"];
+const STATUS_LABEL={todo:"todo",wip:"in progress",done:"done",blocked:"blocked"};
+
+function initPhase0(){
+  const s=loadState();let changed=false;
+  // Phase 0 — semua task done
+  const p0tasks=["p0t1","p0t2","p0t3","p0t4","p0t5","p0t6","p0t7","p0t8","p0t9"];
+  p0tasks.forEach(id=>{if(!s[id]){s[id]={status:"done",notes:"✅ Dieksekusi otomatis 30 Okt 2026"};changed=true;}});
+  // Phase 1 — Navbar reviewed & CV copied (30 Okt 2026)
+  const p1notes={p1t1:"✅ Navbar sticky + frosted glass, tampil sempurna",p1t2:"✅ Hamburger 3-bar→X, mobile menu open/close berfungsi smooth",p1t3:"✅ Active nav highlight real-time saat scroll, verified via browser",p1t4:"✅ CV dicopy: Portofolio_Berliani Risqi.pdf → img/cv-berliani.pdf"};
+  ["p1t1","p1t2","p1t3","p1t4"].forEach(id=>{if(!s[id]){s[id]={status:"done",notes:p1notes[id]||"✅ Done"};changed=true;}});
+  // Phase 2 — Hero reviewed di browser (30 Okt 2026)
+  const p2notes={p2t1:"✅ Foto profil rounded + gradient ring border pink-sage tampil sempurna di semua breakpoint",p2t2:"✅ 5 floating badges smooth (Flutter, Python, AI/ML, QA Testing, SINTA 4) — animasi berjalan baik tanpa clipping",p2t3:"✅ Responsif: mobile 375px (foto atas teks bawah centered), tablet 768px, desktop 1264px — semua ✓",p2t4:"✅ Email berlianiirisqi@gmail.com sudah terset di form handler script.js"};
+  ["p2t1","p2t2","p2t3","p2t4"].forEach(id=>{if(!s[id]||s[id].status!=="done"){s[id]={status:"done",notes:p2notes[id]||"✅ Done"};changed=true;}});
+  if(changed){s._lastUpdate=new Date().toISOString();saveState(s);}
+}
+
+function render(){
+  const state=loadState();const container=document.getElementById("phases");container.innerHTML="";
+  PHASES.forEach(phase=>{
+    const total=phase.tasks.length;
+    const doneCount=phase.tasks.filter(t=>(state[t.id]?.status||"todo")==="done").length;
+    const pct=total?Math.round(doneCount/total*100):0;
+    const isOpen=state[phase.id+"_open"]!==false;const isComplete=pct===100;
+    const phaseEl=document.createElement("div");
+    phaseEl.className="phase"+(isOpen?" open":"")+(isComplete?" phase-complete":"");
+    phaseEl.id=phase.id;
+    phaseEl.innerHTML=`<div class="phase-header ${isOpen?"open":""}">
+      <div class="phase-left"><span class="phase-icon">${phase.icon}</span>
+        <span class="phase-title">${phase.title}${isComplete?' <span style="color:var(--sage-dark);font-size:0.72rem;"> ✅</span>':''}</span></div>
+      <div class="phase-right">
+        <div class="mini-bar-wrap"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+        <span class="phase-pct">${doneCount}/${total}</span><span class="chevron">▼</span>
+      </div></div>
+      <div class="task-body" style="display:${isOpen?"block":"none"}">
+        ${phase.tasks.map((t,i)=>renderTask(t,state,i<phase.tasks.length-1)).join("")}
+      </div>`;
+    phaseEl.querySelector(".phase-header").addEventListener("click",()=>{
+      const s=loadState();const wasOpen=phaseEl.classList.contains("open");
+      phaseEl.classList.toggle("open",!wasOpen);phaseEl.querySelector(".phase-header").classList.toggle("open",!wasOpen);
+      phaseEl.querySelector(".task-body").style.display=wasOpen?"none":"block";
+      s[phase.id+"_open"]=!wasOpen;saveState(s);
+    });
+    container.appendChild(phaseEl);
+  });
+  updateGlobal();
+}
+
+function renderTask(task,state,addSep){
+  const ts=state[task.id]||{status:"todo",notes:""};const isChecked=ts.status==="done";const hasNote=(ts.notes||"").trim().length>0;
+  return `<div class="task-row" id="row_${task.id}">
+    <input type="checkbox" class="task-check" ${isChecked?"checked":""} onchange="toggleCheck('${task.id}',this.checked)">
+    <div class="task-info">
+      <div class="task-name ${isChecked?"done-text":""}">${task.name}</div>
+      ${task.sub?`<div class="task-sub">${task.sub}</div>`:""}
+      <span class="notes-toggle ${hasNote?"has-note":""}" onclick="toggleNotes('${task.id}')" id="ntoggle_${task.id}">
+        ${hasNote?"📝 Lihat/Edit Catatan":"＋ Tambah Catatan"}</span>
+      <div class="notes-box" id="notes_${task.id}">
+        <textarea class="notes-textarea" placeholder="Kendala, catatan, link referensi…" onchange="saveNote('${task.id}',this.value)">${ts.notes||""}</textarea>
+      </div>
+    </div>
+    <span class="badge ${ts.status}" onclick="cycleStatus('${task.id}')">${STATUS_LABEL[ts.status]}</span>
+  </div>${addSep?'<div class="task-sep"></div>':""}`;
+}
+
+function toggleCheck(id,checked){const s=loadState();if(!s[id])s[id]={status:"todo",notes:""};s[id].status=checked?"done":"todo";saveState(s);stampUpdate();render();}
+function cycleStatus(id){const s=loadState();if(!s[id])s[id]={status:"todo",notes:""};const cur=s[id].status||"todo";const next=STATUS_CYCLE[(STATUS_CYCLE.indexOf(cur)+1)%STATUS_CYCLE.length];s[id].status=next;saveState(s);stampUpdate();render();}
+function saveNote(id,val){const s=loadState();if(!s[id])s[id]={status:"todo"};s[id].notes=val;saveState(s);stampUpdate();const t=document.getElementById("ntoggle_"+id);if(t){t.textContent=val.trim()?"📝 Lihat/Edit Catatan":"＋ Tambah Catatan";t.className="notes-toggle"+(val.trim()?" has-note":"");}}
+function toggleNotes(id){const b=document.getElementById("notes_"+id);if(b)b.classList.toggle("visible");}
+function stampUpdate(){const now=new Date();document.getElementById("lastUpdated").textContent=`Terakhir diperbarui: ${now.toLocaleDateString("id-ID",{weekday:"short",day:"2-digit",month:"short",year:"numeric"})} ${now.toLocaleTimeString("id-ID")}`;const s=loadState();s._lastUpdate=now.toISOString();saveState(s);}
+function updateGlobal(){
+  const state=loadState();let total=0,done=0,wip=0,blocked=0,todo=0;
+  PHASES.forEach(p=>p.tasks.forEach(t=>{total++;const st=state[t.id]?.status||"todo";if(st==="done")done++;else if(st==="wip")wip++;else if(st==="blocked")blocked++;else todo++;}));
+  const pct=total?Math.round(done/total*100):0;
+  document.getElementById("globalBar").style.width=pct+"%";
+  document.getElementById("globalLabel").textContent=`${done} / ${total} task selesai — ${pct}% complete`;
+  document.getElementById("cnt-done").textContent=done;document.getElementById("cnt-wip").textContent=wip;
+  document.getElementById("cnt-block").textContent=blocked;document.getElementById("cnt-todo").textContent=todo;
+  const s=loadState();if(s._lastUpdate){const d=new Date(s._lastUpdate);document.getElementById("lastUpdated").textContent=`Terakhir diperbarui: ${d.toLocaleDateString("id-ID",{weekday:"short",day:"2-digit",month:"short",year:"numeric"})} ${d.toLocaleTimeString("id-ID")}`;}
+}
+function expandAll(){const s=loadState();PHASES.forEach(p=>{s[p.id+"_open"]=true;});saveState(s);render();}
+function collapseAll(){const s=loadState();PHASES.forEach(p=>{s[p.id+"_open"]=false;});saveState(s);render();}
+function resetAll(){if(confirm("Reset semua progress?")){localStorage.removeItem(SK);render();}}
+initPhase0();render();
+</script>
+</body>
+</html>
