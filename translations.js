@@ -12,6 +12,7 @@ const TRANSLATIONS = {
     nav_projects: 'Proyek',
     nav_experience: 'Pengalaman',
     nav_certs: 'Sertifikasi',
+    nav_activities: 'Aktivitas',
     nav_contact: 'Kontak',
     nav_cv: '↓ Unduh CV',
 
@@ -68,8 +69,8 @@ const TRANSLATIONS = {
     exp_2_desc: '"Deteksi Bahan Makanan untuk Rekomendasi Resep Masakan pada Program Diet Menggunakan Algoritma CNN" · DOI: 10.35316/.v9i2.6384',
     exp_3_title: "Penelitian Dosen — Atlantara & Lokantara",
     exp_3_desc: "Berperan dalam development & QA sistem wisata terintegrasi Atlantara — meliputi POS Web, Mobile Flutter, dan modul AI.",
-    exp_4_title: "KPI / Magang — PT ISG",
-    exp_4_desc: "Magang di PT ISG dengan fokus pengembangan sistem dan pelaporan berbasis data.",
+    exp_4_title: "Project Manager & Fullstack Dev — SaaS Desa (PT ISG)",
+    exp_4_desc: "Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT ISG.",
     exp_5_title: "Project Based Internship — Home Credit",
     exp_5_desc: "Analisis risiko kredit dan pemodelan machine learning pada dataset Home Credit Default Risk.",
     exp_6_title: "Ketua Himpunan Mahasiswa PTTI",
@@ -92,6 +93,12 @@ const TRANSLATIONS = {
     cert_verified: "Tervalidasi Resmi",
     cert_view_link: "Buka Verifikasi Asli ↗",
     cert_download_cv: "Unduh CV Lengkap ↓",
+
+    // Activities & Leadership
+    activities_title: "Organisasi & Aktivitas",
+    activities_subtitle: "Dokumentasi kepemimpinan Himpunan Mahasiswa PTTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik",
+    activity_badge: "Dokumentasi Kegiatan",
+    activity_view: "Lihat Foto Penuh ↗",
 
     // Contact
     contact_title: "Mari Terhubung",
@@ -127,6 +134,7 @@ const TRANSLATIONS = {
     nav_projects: 'Projects',
     nav_experience: 'Experience',
     nav_certs: 'Certifications',
+    nav_activities: 'Activities',
     nav_contact: 'Contact',
     nav_cv: '↓ Download CV',
 
@@ -183,8 +191,8 @@ const TRANSLATIONS = {
     exp_2_desc: '"Food Ingredient Detection for Recipe Recommendations in Diet Programs Using CNN Algorithm" · DOI: 10.35316/.v9i2.6384',
     exp_3_title: "Lecturer Research Project — Atlantara & Lokantara",
     exp_3_desc: "Contributed to software engineering & QA for the Atlantara tourism management ecosystem — including Web POS, Flutter Mobile, and AI modules.",
-    exp_4_title: "Industrial Internship — PT ISG",
-    exp_4_desc: "Internship at PT ISG focused on enterprise system development and data-driven reporting.",
+    exp_4_title: "Project Manager & Fullstack Dev — Village SaaS (PT ISG)",
+    exp_4_desc: "Led agile sprint task management and engineered multi-tenant SaaS village governance platform integrated with BUMDes Point of Sale (POS) at PT ISG.",
     exp_5_title: "Project Based Internship — Home Credit Indonesia",
     exp_5_desc: "Credit risk analysis and machine learning predictive modeling on Home Credit Default Risk dataset.",
     exp_6_title: "President / Chairperson — PTTI Student Association",
@@ -207,6 +215,12 @@ const TRANSLATIONS = {
     cert_verified: "Officially Verified",
     cert_view_link: "Open Verification ↗",
     cert_download_cv: "Download Full CV ↓",
+
+    // Activities & Leadership
+    activities_title: "Leadership & Activities",
+    activities_subtitle: "Documentation of student association leadership, competitive national grants (POMN & PKM Kemendikbudristek), and academic initiatives",
+    activity_badge: "Activity Gallery",
+    activity_view: "View Full Photo ↗",
 
     // Contact
     contact_title: "Let's Connect",

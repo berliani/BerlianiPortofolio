@@ -23,13 +23,15 @@ const PROJECTS_DATA = {
         'Membangun model AI untuk multi-object detection menggunakan YOLOv8 dan single-object detection menggunakan CNN.',
         'Mengannotasi ~6.000 gambar pada 13 kelas bahan makanan untuk persiapan dataset training.',
         'Mengembangkan frontend aplikasi mobile menggunakan framework Flutter.',
-        'Mengimplementasikan mobile widgets dan unit testing.'
+        'Mengimplementasikan mobile widgets dan unit testing.',
+        'Mengumpulkan dataset resep masakan dari internet'
       ],
       en: [
         'I built an AI model for multi-object detection using YOLOv8 and single-object detection using CNN.',
         'Annotated ~6,000 images across 13 classes for training dataset preparation.',
         'Developed a mobile frontend using the Flutter framework.',
-        'Implemented mobile widgets and unit testing.'
+        'Implemented mobile widgets and unit testing.',
+        'Collected recipe datasets from the internet'
       ]
     },
     tech: ['Flutter', 'YOLOv8', 'CNN', 'Python', 'Laravel', 'MySQL'],
@@ -78,7 +80,7 @@ const PROJECTS_DATA = {
     },
     images: [
       { src: 'img/projects/tuntun.png', caption: 'Tuntun — Konsep & Ilustrasi Navigasi Tunanetra' },
-      { src: 'img/projects/tuntun-logo.png', caption: 'Tuntun — Brand Identity & Design System' }
+      { src: 'img/projects/tuntun mockup.png', caption: 'Tuntun — Interface & Mockup Aplikasi Android' }
     ],
     contributions: {
       id: [
@@ -210,57 +212,63 @@ const PROJECTS_DATA = {
     links: []
   },
   'lokantara-mobile': {
-    title: 'Lokantara Mobile App',
-    badge: 'Penelitian Dosen',
-    category: 'Penelitian Dosen Atlantara',
+    title: 'Lokantara Mobile — Manual Testing & QA (Mitra & User)',
+    badge: 'Penelitian Dosen · QA Testing',
+    category: 'Manual Black-box Testing',
     desc: {
-      id: 'Aplikasi mobile kasir & informasi wisatawan untuk platform Atlantara — transaksi cepat, navigasi, dan katalog.',
-      en: 'Mobile companion app for tourists and merchants on Atlantara — fast transactions, navigation, and destination directory.'
+      id: 'Pengujian manual black-box menyeluruh pada aplikasi mobile Atlantara Lokantara untuk modul Mitra (pengelola wisata) dan modul User (wisatawan).',
+      en: 'Comprehensive manual black-box testing for the Atlantara Lokantara mobile platform covering both Merchant (Mitra) and Tourist (User) modules.'
     },
     images: [
-      { src: 'img/projects/lokantara.png', caption: 'Lokantara Mobile — Aplikasi Kasir & Wisatawan Mobile' },
-      { src: 'img/projects/lokantara-lockup.png', caption: 'Atlantara — Brand Identity & Design Guidelines' }
+      { src: 'img/projects/lokantara.png', caption: 'Lokantara Mobile — Verifikasi Kualitas Aplikasi Kasir Mitra & Portal Wisatawan' },
+      { src: 'img/projects/lokantara-lockup.png', caption: 'Atlantara — Ekosistem Platform Pariwisata Digital Terpadu' }
     ],
     contributions: {
       id: [
-        'Membangun aplikasi mobile multiplatform untuk kasir dan katalog wisata menggunakan Flutter.',
-        'Mengintegrasikan koneksi printer thermal Bluetooth untuk pencetakan bukti transaksi secara instan.',
-        'Menghubungkan klien mobile dengan arsitektur microservices backend terpusat.'
+        'Menyusun test plan dan matriks test cases pengujian manual black-box untuk aplikasi Lokantara Mitra dan Lokantara User.',
+        'Menguji modul Lokantara Mitra: pendaftaran mitra, autentikasi login, pengelolaan profil tempat wisata, upload foto destinasi, konfigurasi harga & kuota tiket, dan integrasi kasir/POS.',
+        'Menguji modul Lokantara User: pencarian destinasi wisata, filter kategori, alur pemesanan tiket, simulasi checkout, validasi barcode/QRIS, serta pengecekan e-tiket.',
+        'Menerapkan metode Boundary Value Analysis dan Equivalence Partitioning untuk validasi field input dan penanganan skenario error.',
+        'Mendokumentasikan bug reporting, langkah-langkah reproduksi masalah (steps to reproduce), serta re-testing pasca bug fixing bersama tim developer.'
       ],
       en: [
-        'Built cross-platform mobile cashier & catalog app using Flutter.',
-        'Integrated Bluetooth thermal printer for immediate receipt generation.',
-        'Connected mobile client to centralized backend microservices.'
+        'Designed test plans and black-box manual test matrices for both Lokantara Mitra (Merchant) and Lokantara User (Tourist) mobile apps.',
+        'Tested Lokantara Mitra module: merchant registration, authentication, attraction profile CRUD, photo uploads, ticket quota/pricing management, and POS transactions.',
+        'Tested Lokantara User module: destination search, category filtering, ticket booking workflows, checkout simulation, QRIS payment verification, and e-ticket history.',
+        'Applied Boundary Value Analysis and Equivalence Partitioning methodologies for form input validation and error handling robustness.',
+        'Documented defect tracking, detailed steps to reproduce, and regression verification post-bug fixes with software developers.'
       ]
     },
-    tech: ['Flutter', 'Dart', 'Bluetooth Printing', 'REST API', 'GetX'],
+    tech: ['Manual Testing', 'Black-box Testing', 'Test Case Design', 'Boundary Value Analysis', 'Equivalence Partitioning', 'Flutter Mobile QA'],
     links: []
   },
   'lokantara-ai': {
-    title: 'Lokantara AI Recommendation & Forecasting',
-    badge: 'Penelitian Dosen',
-    category: 'Penelitian Dosen Atlantara',
+    title: 'Lokantara AI — Itinerary Recommendation & Voice STT',
+    badge: 'Penelitian Dosen · AI System',
+    category: 'Recommendation Engine & Voice STT',
     desc: {
-      id: 'Modul AI untuk rekomendasi destinasi wisata dan peramalan tren transaksi pengunjung pada platform Atlantara.',
-      en: 'AI recommendation module and sales forecasting engine tailored for tourism merchant intelligence.'
+      id: 'Engine rekomendasi rencana perjalanan (itinerary) wisata personal dan pemrosesan perintah suara Speech-to-Text (STT) untuk kemudahan wisatawan.',
+      en: 'Personalized travel itinerary recommendation engine and natural voice trip planning powered by Speech-to-Text (STT) in the Atlantara ecosystem.'
     },
     images: [
-      { src: 'img/projects/lokantara-lockup.png', caption: 'Lokantara AI — Engine Rekomendasi Wisata & Prediksi Penjualan' },
-      { src: 'img/projects/lokantara.png', caption: 'Atlantara — Arsitektur Modul Machine Learning' }
+      { src: 'img/projects/lokantara-lockup.png', caption: 'Lokantara AI — Engine Rekomendasi Rute Wisata & Speech-to-Text Itinerary Planner' },
+      { src: 'img/projects/lokantara.png', caption: 'Atlantara — Integrasi Machine Learning dalam Ekosistem Wisata' }
     ],
     contributions: {
       id: [
-        'Mengeksplorasi dan memformulasikan algoritma analitik prediktif & sistem rekomendasi produk berdasarkan histori transaksi.',
-        'Menyiapkan pipeline preprocessing data tabular serta mengevaluasi akurasi model untuk peramalan stok mitra.',
-        'Menghubungkan model machine learning melalui REST API untuk inferensi cerdas.'
+        'Merancang dan mengembangkan algoritma sistem rekomendasi itinerary wisata yang mempersonalisasi urutan destinasi berdasarkan preferensi kategori, durasi kunjungan, dan budget.',
+        'Mengintegrasikan teknologi Speech-to-Text (STT) untuk memungkinkan wisatawan merencanakan atau mencari rute perjalanan melalui perintah suara alami.',
+        'Mengimplementasikan pengelompokan geografis (clustering) destinasi wisata terdekat untuk mengoptimalkan efisiensi rute perjalanan.',
+        'Menghubungkan modul AI dan voice processing ke backend REST API untuk integrasi langsung dengan aplikasi mobile dan web Atlantara.'
       ],
       en: [
-        'Researched and formulated predictive analytics & product recommendation models based on sales transaction patterns.',
-        'Prepared data preprocessing pipelines and evaluated model accuracy for inventory restock forecasting.',
-        'Exposed machine learning models via REST APIs for seamless platform inference.'
+        'Engineered personalized travel itinerary recommendation algorithms tailoring destination sequences based on category preferences, stay durations, and budget constraints.',
+        'Integrated Speech-to-Text (STT) speech recognition enabling travelers to generate or query itineraries via natural voice commands.',
+        'Implemented geospatial clustering of tourist spots to minimize travel transit overhead and maximize route efficiency.',
+        'Exposed AI and speech processing endpoints via REST APIs for direct consumption by Atlantara mobile and web applications.'
       ]
     },
-    tech: ['Python', 'Scikit-Learn', 'Pandas', 'Time Series Forecasting', 'REST API'],
+    tech: ['Python', 'Speech-to-Text (STT)', 'Recommendation System', 'NLP', 'Geospatial Clustering', 'REST API'],
     links: []
   },
   'cnn-food': {
@@ -321,28 +329,37 @@ const PROJECTS_DATA = {
   },
   'home-credit': {
     title: 'Home Credit Default Risk Prediction',
-    badge: 'PBI Home Credit',
-    category: 'Financial Machine Learning',
+    badge: 'PBI Home Credit · Risk Modeling',
+    category: 'Financial Machine Learning & Risk Analytics',
     desc: {
-      id: 'Analisis risiko gagal bayar kredit nasabah menggunakan machine learning dalam Project Based Internship.',
-      en: 'Credit risk prediction modeling to forecast loan defaults using gradient boosted trees in an industry internship.'
+      id: 'Analisis risiko gagal bayar kredit nasabah menggunakan machine learning (LightGBM, XGBoost, Random Forest) pada Project Based Internship Home Credit Indonesia.',
+      en: 'Credit default risk assessment and predictive machine learning modeling (LightGBM, XGBoost, Random Forest) during Home Credit Indonesia Project Based Internship.'
     },
     images: [
+      { src: 'img/projects/homecredit-slide-1.png', caption: 'Home Credit Indonesia — Final Assessment Executive Presentation' },
+      { src: 'img/projects/homecredit-slide-2.png', caption: 'Business Understanding — Credit Default Risk & Problem Formulation' },
+      { src: 'img/projects/homecredit-slide-3.png', caption: 'Exploratory Data Analysis — Feature Distributions & Handling Imbalanced Data' },
+      { src: 'img/projects/homecredit-slide-4.png', caption: 'Model Evaluation — Benchmark & ROC-AUC Comparison Across Classifiers' },
+      { src: 'img/projects/homecredit-slide-5.png', caption: 'Business Recommendations — Actionable Strategies for Credit Decisioning' },
       { src: 'img/certificates/cert-pbi.png', caption: 'Home Credit Indonesia — Project Based Internship Certificate' }
     ],
     contributions: {
       id: [
-        'Mengembangkan model penilaian risiko kredit menggunakan algoritma LightGBM dan XGBoost selama Project Based Internship.',
-        'Menangani data tidak seimbang (class imbalance) menggunakan teknik SMOTE dan rekayasa fitur pada 100+ indikator pinjaman.',
-        'Mempresentasikan wawasan bisnis berbasis data dan rekomendasi kebijakan mitigasi risiko kredit.'
+        'Menganalisis dataset pinjaman Home Credit Indonesia yang mencakup data aplikasi, riwayat biro kredit, dan pembayaran sebelumnya.',
+        'Melakukan Exploratory Data Analysis (EDA) mendalam serta menangani data tidak seimbang (class imbalance) menggunakan SMOTE dan teknik penyeimbangan data.',
+        'Membangun dan membandingkan model machine learning klasifikasi (Logistic Regression, Random Forest, XGBoost, dan LightGBM) untuk memprediksi probabilitas default kredit nasabah.',
+        'Mengevaluasi performa model dengan metrik ROC-AUC, precision, recall, dan confusion matrix untuk meminimalkan risiko non-performing loan (NPL).',
+        'Mempresentasikan temuan analitis serta rekomendasi strategi mitigasi risiko kredit pada sesi evaluasi akhir (Final Assessment).'
       ],
       en: [
-        'Developed machine learning risk scoring model using LightGBM and XGBoost during Project Based Internship.',
-        'Handled class imbalance with SMOTE and advanced feature engineering across 100+ loan indicators.',
-        'Delivered business presentation and actionable credit policy insights.'
+        'Analyzed Home Credit Indonesia loan datasets encompassing applicant demographics, credit bureau records, and previous payment histories.',
+        'Conducted comprehensive Exploratory Data Analysis (EDA) and resolved extreme class imbalance utilizing SMOTE and data balancing techniques.',
+        'Engineered and benchmarked predictive classification models (Logistic Regression, Random Forest, XGBoost, and LightGBM) to forecast loan default probability.',
+        'Evaluated model efficacy using ROC-AUC scores, precision-recall trade-offs, and confusion matrices to minimize non-performing loans (NPL).',
+        'Delivered final presentation outlining data-driven risk management strategies and credit decisioning recommendations.'
       ]
     },
-    tech: ['Python', 'LightGBM', 'XGBoost', 'Scikit-Learn', 'Pandas', 'Seaborn'],
+    tech: ['Python', 'LightGBM', 'XGBoost', 'Scikit-Learn', 'Pandas', 'SMOTE', 'ROC-AUC'],
     links: []
   },
   'pose-detection': {
@@ -370,27 +387,35 @@ const PROJECTS_DATA = {
     links: []
   },
   'looker-analytics': {
-    title: 'Google Looker Studio Analytics',
-    badge: 'Course & Cert',
-    category: 'Business Intelligence',
+    title: 'Google Looker Studio Analytics Dashboards',
+    badge: 'Business Intelligence & Analytics',
+    category: 'Data Visualization & Reporting',
     desc: {
-      id: 'Visualisasi data interaktif dengan Google Looker Studio untuk pemantauan KPI bisnis dan pelaporan eksekutif.',
-      en: 'Interactive business intelligence dashboards built on Google Looker Studio to track commercial operational KPIs.'
+      id: 'Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Nasabah Kartu Kredit (MySkill Final Project) dan Laporan Transaksi Retail senilai $8.69M.',
+      en: 'Interactive Business Intelligence dashboards built with Google Looker Studio: Credit Card Customer Intelligence (MySkill Final Project) and $8.69M Retail Sales Report.'
     },
     images: [
-      { src: 'img/certificates/cert-myskill.png', caption: 'MySkill — Data Analysis & Visualization Certification' }
+      { src: 'img/projects/looker-dashboard-myskill.png', caption: 'Google Looker Studio — Credit Card Customer Intelligence & Delinquency Dashboard (MySkill Final Project)' },
+      { src: 'img/projects/looker-dashboard-retail.png', caption: 'Google Looker Studio — Retail E-Commerce $8.69M Sales & Regional Performance Analytics' },
+      { src: 'img/certificates/cert-myskill.png', caption: 'MySkill — Data Analysis & Visualization Professional Certification' }
     ],
     contributions: {
       id: [
-        'Merancang dashboard multi-halaman interaktif pada Google Looker Studio untuk pelacakan metrik operasional bisnis.',
-        'Menghubungkan berbagai sumber data (Google Sheets, BigQuery, basis data SQL) dengan calculated fields dan filter kustom.'
+        'Merancang dashboard Business Intelligence interaktif pada Google Looker Studio untuk analisis portofolio kartu kredit nasabah (MySkill Final Project).',
+        'Membangun visualisasi metrik utama: total revolving balance, segmentasi tingkat penghasilan, kategori kartu, status pernikahan, dan tingkat delinquency.',
+        'Mengembangkan dashboard analitik transaksi penjualan ritel senilai $8.69M dengan 82.000+ pesanan, breakdown performa per kategori produk dan regional.',
+        'Menerapkan calculated fields kustom, custom blending data dari spreadsheet / basis data SQL, serta filter kontrol interaktif dinamis.',
+        'Menghasilkan insight analitis untuk mengidentifikasi segmen nasabah berisiko tinggi dan peluang optimasi omzet ritel.'
       ],
       en: [
-        'Designed interactive multi-page dashboards on Google Looker Studio for KPI tracking.',
-        'Connected diverse data sources (Google Sheets, BigQuery, SQL) with customized calculated fields and filters.'
+        'Engineered interactive Business Intelligence dashboards in Google Looker Studio for credit card customer portfolio intelligence (MySkill Final Project).',
+        'Visualized key operational metrics: total revolving balance, income tier breakdown, card tier adoption, marital distributions, and delinquency ratios.',
+        'Developed retail transaction reporting dashboards analyzing $8.69M in revenue across 82K+ purchase orders and multi-regional distributions.',
+        'Implemented custom calculated fields, data blending from tabular sources and SQL, and dynamic cross-filter controls.',
+        'Extracted analytical insights to pinpoint high-risk customer segments and revenue growth opportunities.'
       ]
     },
-    tech: ['Looker Studio', 'SQL', 'BigQuery', 'Google Sheets'],
+    tech: ['Google Looker Studio', 'Business Intelligence', 'Data Blending', 'Calculated Fields', 'SQL', 'Google Sheets'],
     links: []
   },
   'web-scraping': {
@@ -418,58 +443,71 @@ const PROJECTS_DATA = {
     links: []
   },
   'qa-foodplan': {
-    title: 'QA FoodPlan — ISO 25010',
-    badge: 'Smt 5 Quality Assurance',
-    category: 'Software Quality Assurance',
+    title: 'FoodPlan Testing — Unit, Widget & Usability SUS',
+    badge: 'Unit, Widget & SUS Testing',
+    category: 'Mobile Testing & Usability Evaluation',
     desc: {
-      id: 'Pengujian perangkat lunak FoodPlan mencakup fungsional, performa, dan usability berdasarkan standar ISO 25010.',
-      en: 'End-to-end quality assurance for the FoodPlan system evaluating functional suitability, performance, and usability under ISO 25010.'
+      id: 'Pengujian aplikasi mobile FoodPlan mencakup Flutter Unit Testing, Widget Testing, serta evaluasi kebergunaan kuantitatif System Usability Scale (SUS) dengan 20 responden (skor 77.63).',
+      en: 'Comprehensive mobile software testing for FoodPlan including Flutter Unit Testing, Widget Testing, and quantitative System Usability Scale (SUS) evaluation with 20 respondents (score 77.63).'
     },
     images: [
-      { src: 'img/projects/foodplan.png', caption: 'FoodPlan App — Target Verifikasi Kualitas ISO 25010' },
-      { src: 'img/projects/foodplan-mockup.png', caption: 'Matriks Pengujian Fungsionalitas & Performance' }
+      { src: 'img/projects/foodplan-sus-results.png', caption: 'Hasil Pengujian Usability SUS — 20 Responden, Skor Rata-Rata 77.63 (Grade B: Good/Acceptable) & Flutter Unit/Widget Test' },
+      { src: 'img/projects/foodplan-mockup.png', caption: 'FoodPlan — Cakupan Pengujian Komponen Mobile & Integrasi AI' },
+      { src: 'img/projects/foodplan.png', caption: 'FoodPlan — Antarmuka Pengujian Deteksi Bahan Makanan & Fitur Resep' }
     ],
     contributions: {
       id: [
-        'Menyusun skenario dan test case komprehensif mencakup Functional Suitability, Usability, dan Performance Efficiency.',
-        'Menjalankan black-box testing, validasi responsivitas antarmuka, dan pengujian penerimaan pengguna (UAT).',
-        'Menyusun dokumen laporan resmi penjaminan mutu perangkat lunak berstandar ISO 25010.'
+        'Melakukan Unit Testing pada fungsi logika bisnis inti aplikasi FoodPlan (kalkulasi kalori harian, filter resep, parsing deteksi objek).',
+        'Mengimplementasikan Widget Testing menggunakan Flutter Test framework untuk memvalidasi interaksi UI, transisi layar, dan rendering komponen dinamis.',
+        'Melaksanakan pengujian kebergunaan (usability testing) menggunakan instrumen kuesioner System Usability Scale (SUS) terstandarisasi dengan 20 responden pengguna nyata.',
+        'Mengolah data skor kuesioner menggunakan alat hitung SUS, menghasilkan skor rata-rata 77.63 yang tergolong dalam Kategori "Good" / Akseptabel (Grade Scale B).',
+        'Merumuskan rekomendasi perbaikan UI/UX dan alur navigasi berdasarkan feedback responden untuk meningkatkan kepuasan dan adopsi pengguna.'
       ],
       en: [
-        'Formulated comprehensive test cases covering Functional Suitability, Usability, and Performance Efficiency.',
-        'Executed black-box testing, UI responsiveness validation, and user acceptance testing (UAT).',
-        'Documented formal ISO 25010 quality assurance test reports.'
+        'Executed Unit Testing on core business logic functions of FoodPlan (calorie calculation, recipe filtering, detection output parsing).',
+        'Implemented Widget Testing via Flutter Test framework to validate responsive UI rendering, state transitions, and user interactions.',
+        'Conducted usability testing utilizing the standardized System Usability Scale (SUS) methodology with 20 real end-user respondents.',
+        'Calculated quantitative survey data using SUS calculation tool, achieving an average score of 77.63, classified as "Good" / Acceptable (Grade Scale B).',
+        'Derived actionable UI/UX and interaction design recommendations based on empirical user feedback to improve mobile usability.'
       ]
     },
-    tech: ['ISO 25010', 'Selenium IDE', 'GTMetrix', 'Test Case Design', 'UAT'],
+    tech: ['Flutter Test', 'Unit Testing', 'Widget Testing', 'System Usability Scale (SUS)', 'Dart', 'UX Research'],
     links: []
   },
   'qa-bicaraku': {
-    title: 'QA Bicaraku — ISO 25010',
-    badge: 'Smt 6 Quality Assurance',
-    category: 'Software Quality Assurance',
+    title: 'Pengujian Kualitas ISO/IEC 25010 Bicaraku',
+    badge: 'ISO 25010 & Katalon QA',
+    category: 'Automated & Manual Software QA',
     desc: {
-      id: 'Laporan pengujian kualitas perangkat lunak Bicaraku menggunakan Katalon Studio dan evaluasi System Usability Scale (SUS).',
-      en: 'Comprehensive software testing for Bicaraku utilizing Katalon Studio automation and System Usability Scale (SUS) assessment.'
+      id: 'Pengujian penjaminan mutu menyeluruh aplikasi Bicaraku berstandar ISO/IEC 25010, mencakup PRD, Test Plan, Test Design, Test Case, dan otomatisasi Katalon Studio.',
+      en: 'Comprehensive software quality assurance for the Bicaraku app under ISO/IEC 25010 standards, including PRD, Test Plan, Test Design, Test Cases, and Katalon Studio automation.'
     },
     images: [
-      { src: 'img/projects/bicaraku-mockup-1.png', caption: 'Bicaraku — Skenario Pengujian Deteksi Kamera & Suara' },
-      { src: 'img/projects/bicaraku.png', caption: 'Laporan Evaluasi System Usability Scale (SUS)' }
+      { src: 'img/projects/qa-bicaraku-slide-1.png', caption: 'Laporan Pengujian Kualitas Perangkat Lunak Bicaraku — Standar ISO/IEC 25010' },
+      { src: 'img/projects/qa-bicaraku-slide-2.png', caption: 'Katalon Studio — Otomasi Pengujian, Test Suite & Test Design Matrix' },
+      { src: 'img/projects/qa-bicaraku-slide-3.png', caption: 'Katalon Studio — Detail Step Execution & Verifikasi Log Uji Regresi' },
+      { src: 'img/projects/qa-bicaraku-slide-4.png', caption: 'Evaluasi Karakteristik Mutu ISO 25010: Functional, Usability, Reliability & Performance' }
     ],
     contributions: {
       id: [
-        'Merencanakan dan mengeksekusi skenario pengujian otomatis dan manual untuk fitur deteksi objek kamera dan output audio.',
-        'Mengevaluasi metrik kebergunaan antarmuka menggunakan kuesioner System Usability Scale (SUS) bersama pengguna target.',
-        'Mendokumentasikan hasil temuan defek serta rekomendasi perbaikan kualitas sistem.'
+        'Menyusun dokumen Product Requirement Document (PRD), Test Plan, dan Test Design menyeluruh untuk aplikasi Bicaraku.',
+        'Merancang matriks test cases detail mencakup fungsionalitas deteksi objek kamera, stimulasi interaktif anak, text-to-speech, dan speech-to-text.',
+        'Mengembangkan skrip otomasi pengujian menggunakan Katalon Studio untuk pengujian alur pengguna dan regresi otomatis.',
+        'Melaksanakan evaluasi penjaminan mutu perangkat lunak berstandar ISO/IEC 25010 pada karakteristik Functional Suitability, Usability, Performance Efficiency, dan Reliability.',
+        'Mengelola dan mendokumentasikan seluruh laporan pengujian, hasil eksekusi Katalon, dan artefak QA pada Google Drive.'
       ],
       en: [
-        'Planned and executed automated and manual testing scenarios for voice and camera detection features.',
-        'Evaluated usability metrics with System Usability Scale (SUS) involving assistive target users.',
-        'Documented defect reports and actionable software enhancement recommendations.'
+        'Authored comprehensive Product Requirement Document (PRD), Test Plan, and Test Design specifications for the Bicaraku application.',
+        'Formulated detailed test case matrices covering camera-based object detection, interactive speech exercises, text-to-speech, and speech-to-text features.',
+        'Developed automated test scripts using Katalon Studio for automated functional regression and end-to-end user journeys.',
+        'Evaluated software quality compliance against ISO/IEC 25010 across Functional Suitability, Usability, Performance Efficiency, and Reliability.',
+        'Managed and documented all formal QA test reports, Katalon execution logs, and testing deliverables on Google Drive.'
       ]
     },
-    tech: ['Katalon Studio', 'ISO 25010', 'SUS Testing', 'Accessibility QA'],
-    links: []
+    tech: ['ISO/IEC 25010', 'Katalon Studio', 'Test Plan & Test Design', 'PRD', 'Automated Testing', 'Test Case Design'],
+    links: [
+      { text: '📂 Repositori Dokumen QA di Google Drive ↗', url: 'https://drive.google.com/drive/folders/1vIjkKnzvKz_VgFtCGdF8_wJD1GH3mlkg' }
+    ]
   },
   'api-testing': {
     title: 'API Automated Testing (FoodPlan & Bicaraku)',
@@ -524,6 +562,40 @@ const PROJECTS_DATA = {
     },
     tech: ['Unity / C#', 'Pixel Art', 'Audio Synthesis', 'Game Mechanics'],
     links: []
+  },
+  'magang-saas': {
+    title: 'Multi-Tenant SaaS Website Desa & POS (PT ISG)',
+    badge: 'Magang PT ISG · Enterprise SaaS',
+    category: 'Project Management & Fullstack Web',
+    desc: {
+      id: 'Sistem Informasi Manajemen Desa berbasis SaaS arsitektur Multi-Tenant dengan integrasi Point of Sales (POS) BUMDes yang dikembangkan selama magang di PT ISG.',
+      en: 'Multi-Tenant SaaS Village Management Information System integrated with BUMDes Point of Sales (POS) developed during industrial internship at PT ISG.'
+    },
+    images: [
+      { src: 'img/projects/magang-saas-slide-1.png', caption: 'SaaS Website Desa & POS — Laporan Magang Industri PT ISG (Semester 7)' },
+      { src: 'img/projects/magang-saas-slide-2.png', caption: 'Latar Belakang & Urgensi Tata Kelola Digital Desa Terpadu Multi-Tenant' },
+      { src: 'img/projects/magang-saas-slide-3.png', caption: 'Arsitektur Multi-Tenant SaaS & Integrasi Point of Sale (POS) BUMDes' },
+      { src: 'img/projects/magang-saas-slide-4.png', caption: 'Manajemen Proyek Agile: Perancangan Task, Sprint Backlog & WBS' },
+      { src: 'img/projects/magang-saas-slide-5.png', caption: 'Antarmuka Portal Web Desa, Layanan Surat Online & Kasir POS BUMDes' }
+    ],
+    contributions: {
+      id: [
+        'Bertindak sebagai Project Manager: menyusun Work Breakdown Structure (WBS), merancang dan mengelola task backlog, membagi tanggung jawab tim pengembang, serta memonitor timeline sprint magang.',
+        'Bertindak sebagai Fullstack Web Developer: membangun arsitektur multi-tenant SaaS yang memungkinkan satu platform melayani banyak instansi desa secara independen dan aman.',
+        'Mengembangkan modul Point of Sales (POS) kasir terintegrasi untuk BUMDes dan unit usaha desa (transaksi kasir, manajemen inventaris barang, cetak struk, dan pelaporan keuangan).',
+        'Merancang modul administrasi persuratan desa mandiri bagi warga serta konfigurasi routing sub-domain dinamis untuk setiap tenant desa.',
+        'Menyusun dokumentasi teknis sistem, materi presentasi laporan magang, serta mempresentasikan hasil proyek di hadapan manajemen PT ISG.'
+      ],
+      en: [
+        'Served as Project Manager: defined Work Breakdown Structures (WBS), organized agile task backlogs, allocated responsibilities across developers, and monitored delivery milestones.',
+        'Served as Fullstack Web Developer: built scalable multi-tenant SaaS architecture allowing a unified platform to serve multiple village administrations independently and securely.',
+        'Developed integrated Point of Sales (POS) cashier modules for village-owned enterprises (BUMDes) and local MSMEs (sales checkout, stock management, receipt generation, financial reports).',
+        'Designed citizen self-service administrative letter request workflows and dynamic sub-domain routing for individual village tenants.',
+        'Authored technical system documentation, final internship presentation decks, and defended deliverables before PT ISG industrial mentors.'
+      ]
+    },
+    tech: ['Project Management', 'Fullstack Web', 'Multi-Tenant SaaS', 'Point of Sale (POS)', 'Laravel/Node.js', 'MySQL', 'Agile/Scrum'],
+    links: []
   }
 };
 
@@ -540,58 +612,138 @@ const CERTS_DATA = {
     issuer: 'Badan Nasional Sertifikasi Profesi (BNSP) Republik Indonesia',
     image: 'img/certificates/cert-bnsp.png',
     badge: 'Sertifikasi Nasional',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'huawei': {
     title: 'Huawei Certified HCIA — Artificial Intelligence',
     issuer: 'Huawei ICT Academy',
     image: 'img/certificates/cert-huawei.jpg',
     badge: 'Internasional',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'digitalent': {
     title: 'Fresh Graduate Academy (FGA) — AI Intermediate Track',
     issuer: 'Kementerian Komunikasi dan Informatika RI (Kominfo)',
     image: 'img/certificates/cert-digitalent.png',
     badge: 'Kominfo RI',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'myskill': {
     title: 'Data Science & Business Analytics Certified',
     issuer: 'MySkill Indonesia',
     image: 'img/certificates/cert-myskill.png',
     badge: 'Professional Track',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'coursera': {
     title: 'Machine Learning & Python Foundations',
     issuer: 'Coursera International',
     image: 'img/certificates/cert-coursera.png',
     badge: 'Global Credential',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'pbi': {
     title: 'Project Based Internship — Data Analytics',
     issuer: 'Home Credit Indonesia × Rakamin Academy',
     image: 'img/certificates/cert-pbi.png',
     badge: 'Industry Project',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'pomn': {
     title: 'Pendanaan Program Ormawa Membangun Negeri (POMN) 2024',
     issuer: 'Ditjen Pendidikan Vokasi Kemendikbudristek RI (Ketua Tim Pelaksana)',
     image: 'img/certificates/cert-pomn.jpg',
     badge: 'Hibah Nasional Dikti',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'pkm': {
     title: 'Pendanaan Program Kreativitas Mahasiswa Karsa Cipta (PKM-KC) 2023',
     issuer: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi RI',
     image: 'img/certificates/cert-pkm.jpg',
     badge: 'Hibah Nasional Dikti',
-    link: 'img/cv-berliani.pdf'
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   }
 };
+
+const ACTIVITIES_DATA = [
+  {
+    img: 'img/kegiatan/optimized/AZR06624.jpg',
+    full: 'img/kegiatan/optimized/AZR06624.jpg',
+    title: { id: 'Ketua Himpunan Mahasiswa PTTI — Memimpin Rapat Kerja Organisasi', en: 'President of PTTI Student Association — Leading Work Plan Strategy' },
+    desc: { id: 'Memimpin rapat koordinasi strategis dan perencanaan program kerja tahunan Himpunan Mahasiswa PTTI.', en: 'Leading strategic coordination and departmental program planning for the PTTI Student Association.' },
+    category: { id: 'Kepemimpinan', en: 'Leadership' }
+  },
+  {
+    img: 'img/kegiatan/optimized/AZR08051.jpg',
+    full: 'img/kegiatan/optimized/AZR08051.jpg',
+    title: { id: 'Sambutan & Pemaparan Program Himpunan Mahasiswa', en: 'Opening Remarks & Student Association Showcase' },
+    desc: { id: 'Pemaparan arah kerja organisasi dan sambutan resmi pada agenda formal kemahasiswaan.', en: 'Delivering opening address and presenting organizational roadmap during formal student events.' },
+    category: { id: 'Kepemimpinan', en: 'Leadership' }
+  },
+  {
+    img: 'img/kegiatan/optimized/DSC08118.jpg',
+    full: 'img/kegiatan/optimized/DSC08118.jpg',
+    title: { id: 'Pelaksanaan Hibah POMN Kemendikbudristek — Edukasi & Pengabdian Masyarakat', en: 'POMN Ministry Grant — Community Empowerment & Tech Outreach' },
+    desc: { id: 'Kegiatan edukasi dan pemberdayaan masyarakat desa binaan dalam Program Ormawa Membangun Negeri.', en: 'Community tech education and empowerment initiatives under the national POMN grant program.' },
+    category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
+  },
+  {
+    img: 'img/kegiatan/optimized/HMS04592.jpg',
+    full: 'img/kegiatan/optimized/HMS04592.jpg',
+    title: { id: 'Implementasi Lapangan POMN bersama Warga & Perangkat Desa', en: 'Field Implementation of POMN Grant with Village Leaders' },
+    desc: { id: 'Kolaborasi dan interaksi langsung dengan perangkat desa serta warga binaan program POMN.', en: 'Direct collaboration and engagement with rural village leaders and local beneficiary communities.' },
+    category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG-20240811-WA0039.jpg',
+    full: 'img/kegiatan/optimized/IMG-20240811-WA0039.jpg',
+    title: { id: 'Sinergi Ormawa Membangun Negeri (POMN 2024)', en: 'Synergy in Building the Nation — POMN Grant 2024' },
+    desc: { id: 'Dokumentasi tim pelaksana POMN Kemendikbudristek dalam pengabdian di lokasi sasaran.', en: 'Field documentation of the POMN executive committee during on-site community service outreach.' },
+    category: { id: 'Hibah Nasional', en: 'National Grant' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG-20241021-WA0038.jpg',
+    full: 'img/kegiatan/optimized/IMG-20241021-WA0038.jpg',
+    title: { id: 'Forum Riset Teknologi Informasi (FoRTI)', en: 'FoRTI IT Research Forum Discussion' },
+    desc: { id: 'Diskusi riset terapan teknologi informasi dan kajian literatur ilmiah bersama tim riset FoRTI.', en: 'Applied IT research deliberations and academic literature reviews with FoRTI research fellows.' },
+    category: { id: 'Riset Akademik', en: 'Academic Research' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
+    full: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
+    title: { id: 'Delegasi Mahasiswa & Presentasi Inovasi Teknologi', en: 'Student Delegation & Tech Innovation Showcase' },
+    desc: { id: 'Mewakili organisasi kemahasiswaan dalam forum presentasi dan expo inovasi teknologi.', en: 'Representing student organization in tech exhibition forums and innovation showcases.' },
+    category: { id: 'Delegasi & Prestasi', en: 'Delegation' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG-20241117-WA0080.jpg',
+    full: 'img/kegiatan/optimized/IMG-20241117-WA0080.jpg',
+    title: { id: 'Monitoring & Evaluasi Kegiatan Hibah Kemendikbudristek', en: 'Monitoring & Evaluation of Ministry Competitive Grants' },
+    desc: { id: 'Sesi pertanggungjawaban program kerja, monitoring kemajuan, dan evaluasi hasil kegiatan.', en: 'Accountability reporting, milestone monitoring, and program outcome evaluation session.' },
+    category: { id: 'Akuntabilitas Hibah', en: 'Grant Governance' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
+    full: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
+    title: { id: 'Gelar Karya Inovasi & Hasil Program Pengabdian', en: 'Student Innovation Exposition & Program Deliverables' },
+    desc: { id: 'Pameran hasil luaran pengabdian dan inovasi teknologi yang dikembangkan oleh tim mahasiswa.', en: 'Exposition of community service deliverables and tech solutions developed by student teams.' },
+    category: { id: 'Ekspo & Gelar Karya', en: 'Exposition' }
+  },
+  {
+    img: 'img/kegiatan/optimized/IMG_5879.jpg',
+    full: 'img/kegiatan/optimized/IMG_5879.jpg',
+    title: { id: 'Musyawarah Besar & Regenerasi Kepengurusan Himpunan', en: 'Grand Assembly & Departmental Leadership Transition' },
+    desc: { id: 'Forum musyawarah tahunan pengurus dan estafet kepemimpinan Himpunan Mahasiswa PTTI.', en: 'Annual student parliament assembly and democratic succession of association leadership.' },
+    category: { id: 'Regenerasi Organisasi', en: 'Governance' }
+  },
+  {
+    img: 'img/kegiatan/optimized/P1030241.jpg',
+    full: 'img/kegiatan/optimized/P1030241.jpg',
+    title: { id: 'Kebersamaan & Solidaritas Pengurus Himpunan Mahasiswa', en: 'Team Fellowship — PTTI Student Association' },
+    desc: { id: 'Solidaritas dan dedikasi rekan-rekan pengurus dalam menjalankan amanah organisasi kemahasiswaan.', en: 'Collegial camaraderie and dedicated teamwork across departmental student committee members.' },
+    category: { id: 'Solidaritas Organisasi', en: 'Community' }
+  }
+];
 
 // ── LANGUAGE SWITCHER LOGIC ──────────────────
 function setLanguage(lang) {
@@ -631,14 +783,27 @@ function setLanguage(lang) {
     btn.classList.toggle('active', isActive);
   });
 
-  // 5. If a project modal is currently open, refresh its content in the new language
+  // 5. Update activities grid in active language
+  if (typeof renderActivities === 'function') {
+    renderActivities();
+  }
+
+  // 6. If a project modal is currently open, refresh its content in the new language
   if (typeof activeProjectId !== 'undefined' && activeProjectId && typeof refreshActiveModal === 'function') {
     refreshActiveModal();
+  }
+
+  // 7. If an activity modal is currently open, refresh its caption in the new language
+  if (typeof activeActivityIdx !== 'undefined' && activeActivityIdx !== null && typeof refreshActiveActivityModal === 'function') {
+    refreshActiveActivityModal();
   }
 }
 
 let activeProjectId = null;
 let refreshActiveModal = null;
+let activeActivityIdx = null;
+let refreshActiveActivityModal = null;
+let renderActivities = null;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -979,14 +1144,133 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === certModal) closeCertModalFunc();
   });
 
-  // Global ESC key to close any open modal & Arrow keys for slider
+  // ── 11. ACTIVITIES GALLERY & LIGHTBOX MODAL ──
+  const activitiesGrid       = document.getElementById('activitiesGrid');
+  const activityModal        = document.getElementById('activityModal');
+  const closeActivityModal   = document.getElementById('closeActivityModal');
+  const modalActivityImg     = document.getElementById('modalActivityImg');
+  const modalActivityTitle   = document.getElementById('modalActivityTitle');
+  const modalActivityDesc    = document.getElementById('modalActivityDesc');
+  const modalActivityBadge   = document.getElementById('modalActivityBadge');
+  const modalActivityCounter = document.getElementById('modalActivityCounter');
+  const activityPrev         = document.getElementById('activityPrev');
+  const activityNext         = document.getElementById('activityNext');
+
+  renderActivities = function() {
+    if (!activitiesGrid) return;
+    activitiesGrid.innerHTML = '';
+    ACTIVITIES_DATA.forEach((item, idx) => {
+      const title = item.title[currentLang] || item.title.id;
+      const desc = item.desc[currentLang] || item.desc.id;
+      const category = item.category[currentLang] || item.category.id;
+      const viewText = TRANSLATIONS[currentLang]?.activity_view || 'Lihat Foto Penuh ↗';
+      const badgeText = TRANSLATIONS[currentLang]?.activity_badge || 'Dokumentasi Kegiatan';
+
+      const card = document.createElement('div');
+      card.className = 'activity-card reveal group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pink-soft/30 cursor-pointer flex flex-col';
+      card.dataset.activityIdx = idx;
+      card.innerHTML = `
+        <div class="relative overflow-hidden bg-cream-dark h-56">
+          <img src="${item.img}" alt="${title}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white text-xs font-semibold flex items-center gap-1.5">${viewText}</span>
+          </div>
+          <span class="absolute top-3 left-3 text-xs bg-white/95 backdrop-blur-sm text-pink-deep px-3 py-1 rounded-full font-mono font-semibold shadow-sm">${category}</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-charcoal text-base group-hover:text-pink-deep transition-colors leading-snug">${title}</h3>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">${desc}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-pink-soft/20 flex items-center justify-between text-xs text-pink-deep font-semibold">
+            <span>${badgeText}</span>
+            <span>📸</span>
+          </div>
+        </div>
+      `;
+      card.addEventListener('click', () => openActivityModal(idx));
+      activitiesGrid.appendChild(card);
+
+      if (typeof observerReveal !== 'undefined' && observerReveal) {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          card.classList.add('visible');
+        } else {
+          observerReveal.observe(card);
+        }
+      } else {
+        card.classList.add('visible');
+      }
+    });
+  };
+
+  function showActivitySlide(idx) {
+    if (!ACTIVITIES_DATA.length || !modalActivityImg) return;
+    activeActivityIdx = (idx + ACTIVITIES_DATA.length) % ACTIVITIES_DATA.length;
+    const item = ACTIVITIES_DATA[activeActivityIdx];
+    const title = item.title[currentLang] || item.title.id;
+    const desc = item.desc[currentLang] || item.desc.id;
+    const category = item.category[currentLang] || item.category.id;
+
+    modalActivityImg.style.opacity = '0';
+    setTimeout(() => {
+      modalActivityImg.src = item.full || item.img;
+      modalActivityImg.alt = title;
+      if (modalActivityTitle) modalActivityTitle.textContent = title;
+      if (modalActivityDesc) modalActivityDesc.textContent = desc;
+      if (modalActivityBadge) modalActivityBadge.textContent = category;
+      if (modalActivityCounter) modalActivityCounter.textContent = `${activeActivityIdx + 1} / ${ACTIVITIES_DATA.length}`;
+      modalActivityImg.style.opacity = '1';
+    }, 120);
+  }
+
+  function openActivityModal(idx) {
+    if (!activityModal) return;
+    showActivitySlide(idx);
+    activityModal.classList.add('modal-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeActivityModalFunc() {
+    activeActivityIdx = null;
+    activityModal?.classList.remove('modal-active');
+    document.body.style.overflow = '';
+  }
+
+  refreshActiveActivityModal = () => {
+    if (activeActivityIdx !== null && activityModal?.classList.contains('modal-active')) {
+      showActivitySlide(activeActivityIdx);
+    }
+  };
+
+  activityPrev?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showActivitySlide(activeActivityIdx - 1);
+  });
+  activityNext?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showActivitySlide(activeActivityIdx + 1);
+  });
+  closeActivityModal?.addEventListener('click', closeActivityModalFunc);
+  activityModal?.addEventListener('click', (e) => {
+    if (e.target === activityModal) closeActivityModalFunc();
+  });
+
+  // Render initial activities
+  renderActivities();
+
+  // Global ESC key to close any open modal & Arrow keys for sliders
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeProjectModalFunc();
       closeCertModalFunc();
-    } else if (projectModal.classList.contains('modal-active')) {
+      closeActivityModalFunc();
+    } else if (projectModal && projectModal.classList.contains('modal-active')) {
       if (e.key === 'ArrowLeft') renderSliderImage(currentImageIdx - 1);
       if (e.key === 'ArrowRight') renderSliderImage(currentImageIdx + 1);
+    } else if (activityModal && activityModal.classList.contains('modal-active')) {
+      if (e.key === 'ArrowLeft') showActivitySlide(activeActivityIdx - 1);
+      if (e.key === 'ArrowRight') showActivitySlide(activeActivityIdx + 1);
     }
   });
 
