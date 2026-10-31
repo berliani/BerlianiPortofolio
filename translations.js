@@ -26,12 +26,12 @@ const TRANSLATIONS = {
 
     // About Me
     about_title: "Tentang Saya",
-    about_subtitle: "Mahasiswa D4 Teknik Informatika yang passionate di bidang pengembangan aplikasi mobile, data science, dan kecerdasan buatan (AI).",
-    about_bio_1: "Saya adalah Berliani Risqi Dwi Saputri, lulusan D4 Teknik Informatika dari Politeknik Harapan Bersama / Universitas Harkat Negeri, Angkatan 2026. Selama kuliah, saya aktif mengembangkan berbagai proyek mulai dari aplikasi mobile berbasis AI menggunakan Flutter & TensorFlow, hingga sistem analitik data dan pengujian perangkat lunak berstandar ISO.",
+    about_subtitle: "Lulusan D4 Teknik Informatika yang passionate di bidang pengembangan aplikasi mobile, data science, dan kecerdasan buatan (AI).",
+    about_bio_1: "Saya adalah Berliani Risqi Dwi Saputri, lulusan D4 Teknik Informatika dari Universitas Harkat Negeri, Angkatan 2026. Selama kuliah, saya aktif mengembangkan berbagai proyek mulai dari aplikasi mobile berbasis AI menggunakan Flutter & TensorFlow, hingga sistem analitik data dan pengujian perangkat lunak berstandar ISO.",
     about_bio_2: "Karya saya mencakup penelitian yang telah dipublikasikan di jurnal terakreditasi SINTA 4, proyek penelitian dosen aktif, serta pendanaan PKM-KC dan POMN dari Kemendikbudristek RI.",
     about_bio_3: "Saya percaya teknologi terbaik adalah yang benar-benar membantu manusia — dan itulah yang selalu saya wujudkan lewat setiap proyek. 🌸",
     about_loc: "📍 Tegal, Jawa Tengah",
-    about_campus: "🎓 Politeknik Harapan Bersama / UHN",
+    about_campus: "🎓 Universitas Harkat Negeri",
     about_class: "📅 Angkatan 2026",
     stat_mobile: "Aplikasi Mobile",
     stat_web: "Proyek Web",
@@ -53,27 +53,28 @@ const TRANSLATIONS = {
     projects_subtitle: "Koleksi proyek dari perkuliahan, penelitian dosen, tugas akhir, dan magang industri",
     tab_all: "✨ Semua",
     tab_mobile: "📱 Mobile",
-    tab_web: "🌐 Web",
+    // tab_web: "🌐 Web",
     tab_ai: "🤖 AI & Data",
     tab_qa: "🧪 QA",
     tab_gamedev: "🎮 Game Dev",
     tab_riset: "🔬 Penelitian Dosen",
+    tab_magang: "💼 Magang",
     card_hint: "Lihat Mockup & Kontribusi ↗",
 
     // Experience
     exp_title: "Pengalaman & Prestasi",
     exp_subtitle: "Perjalanan akademik, kepemimpinan organisasi, dan pencapaian selama masa studi",
     exp_1_title: 'Tugas Akhir / Skripsi — App "Tuntun"',
-    exp_1_desc: "Pengembangan aplikasi panduan visual berbasis Flutter & AI untuk pengguna difabel — penyelesaian studi D4 Teknik Informatika.",
+    exp_1_desc: "Pengembangan aplikasi panduan visual berbasis Flutter & AI untuk tunanetra — penyelesaian studi D4 Teknik Informatika.",
     exp_2_title: "Publikasi Jurnal SINTA 4",
     exp_2_desc: '"Deteksi Bahan Makanan untuk Rekomendasi Resep Masakan pada Program Diet Menggunakan Algoritma CNN" · DOI: 10.35316/.v9i2.6384',
     exp_3_title: "Penelitian Dosen — Atlantara & Lokantara",
     exp_3_desc: "Berperan dalam development & QA sistem wisata terintegrasi Atlantara — meliputi POS Web, Mobile Flutter, dan modul AI.",
-    exp_4_title: "Project Manager & Fullstack Dev — SaaS Desa (PT ISG)",
-    exp_4_desc: "Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT ISG.",
+    exp_4_title: "Project Manager & Fullstack Web Dev — SaaS Desa (PT ISG)",
+    exp_4_desc: "Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT Intermedia Solusindo Global.",
     exp_5_title: "Project Based Internship — Home Credit",
     exp_5_desc: "Analisis risiko kredit dan pemodelan machine learning pada dataset Home Credit Default Risk.",
-    exp_6_title: "Ketua Himpunan Mahasiswa HMPTI",
+    exp_6_title: "Ketua Himpunan Mahasiswa TI",
     exp_6_desc: "Memimpin organisasi himpunan mahasiswa program studi, mengkoordinir kegiatan akademik dan non-akademik anggota.",
     exp_7_title: "Pendanaan POMN — Program Ormawa Membangun Negeri",
     exp_7_desc: "Lolos pendanaan Program Ormawa Membangun Negeri (POMN) dari Kemendikbudristek RI.",
@@ -81,7 +82,7 @@ const TRANSLATIONS = {
     exp_8_desc: "Anggota staf riset di Forum Riset Teknologi Informasi (FoRTI), berkontribusi dalam penelitian di bidang teknologi informasi.",
     exp_9_title: "Pendanaan PKM-KC — Program Kreativitas Mahasiswa",
     exp_9_desc: "Lolos seleksi dan mendapatkan pendanaan PKM-KC dari Kemendikbudristek RI untuk pengembangan inovasi teknologi.",
-    exp_10_title: "Sekretaris Himpunan Mahasiswa HMPTI",
+    exp_10_title: "Sekretaris Himpunan Mahasiswa TI",
     exp_10_desc: "Bertanggung jawab dalam pengelolaan administrasi, dokumentasi, dan korespondensi organisasi himpunan mahasiswa.",
 
     // Certifications
@@ -96,7 +97,7 @@ const TRANSLATIONS = {
 
     // Activities & Leadership
     activities_title: "Organisasi & Aktivitas",
-    activities_subtitle: "Dokumentasi kepemimpinan Himpunan Mahasiswa HMPTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik",
+    activities_subtitle: "Dokumentasi kepemimpinan Himpunan Mahasiswa TI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik",
     activity_badge: "Kategori",
     activity_view: "Perbesar Foto ↗",
 
@@ -148,12 +149,12 @@ const TRANSLATIONS = {
 
     // About Me
     about_title: "About Me",
-    about_subtitle: "Informatics Engineering student passionate about mobile app development, data science, and artificial intelligence (AI).",
+    about_subtitle: "Fresh Graduate Informatics Engineering passionate about mobile app development, data science, and artificial intelligence (AI).",
     about_bio_1: "I am Berliani Risqi Dwi Saputri, an Informatics Engineering graduate from Politeknik Harapan Bersama / Universitas Harkat Negeri, Class of 2026. Throughout college, I actively developed diverse projects ranging from AI-based mobile apps using Flutter & TensorFlow to data analytics systems and ISO-standard software quality assurance.",
     about_bio_2: "My work includes research published in SINTA 4 accredited journal, active lecturer research projects, as well as PKM-KC and POMN funding grants from the Ministry of Education and Culture RI.",
     about_bio_3: "I believe the best technology is one that truly empowers people — and that is what I strive to deliver in every project. 🌸",
     about_loc: "📍 Tegal, Central Java, Indonesia",
-    about_campus: "🎓 Politeknik Harapan Bersama / UHN",
+    about_campus: "🎓 Universitas Harkat Negeri",
     about_class: "📅 Class of 2026",
     stat_mobile: "Mobile Apps",
     stat_web: "Web Projects",
@@ -180,6 +181,7 @@ const TRANSLATIONS = {
     tab_qa: "🧪 QA",
     tab_gamedev: "🎮 Game Dev",
     tab_riset: "🔬 Lecturer Research",
+    tab_magang: "💼 Internship",
     card_hint: "View Mockup & Contributions ↗",
 
     // Experience

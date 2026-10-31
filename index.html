@@ -134,8 +134,8 @@
           <p class="reveal reveal-delay-3 text-base md:text-lg text-gray-600 mt-5 max-w-xl leading-relaxed">
             Turning ideas into digital experiences —
             <span class="text-pink-deep font-semibold">Mobile</span>,
-            <span class="text-sage-dark font-semibold">Web</span>,
-            <span class="text-pink-deep font-semibold">Data & AI</span>,
+            <span class="text-sage-dark font-semibold">Data</span>,
+            <span class="text-pink-deep font-semibold">AI & ML</span>,
             dan
             <span class="text-sage-dark font-semibold">Quality Assurance</span>.
           </p>
@@ -203,10 +203,10 @@
           </div>
           <div class="stat-card">
             <div class="text-3xl font-bold text-sage-dark font-display">
-              <span data-count="4" data-suffix="+">4+</span>
+              <span data-count="4" data-suffix="+">4</span>
             </div>
-            <div class="text-sm text-gray-500 mt-1">Web Projects</div>
-            <div class="text-2xl mt-1">🌐</div>
+            <div class="text-sm text-gray-500 mt-1">QA Project</div>
+            <div class="text-2xl mt-1">🔎</div>
           </div>
           <div class="stat-card">
             <div class="text-3xl font-bold text-pink-deep font-display">
@@ -352,6 +352,7 @@
         <button class="filter-tab" data-filter="qa" data-i18n="tab_qa">🧪 QA</button>
         <button class="filter-tab" data-filter="gamedev" data-i18n="tab_gamedev">🎮 Game Dev</button>
         <button class="filter-tab" data-filter="riset" data-i18n="tab_riset">🔬 Penelitian Dosen</button>
+        <button class="filter-tab" data-filter="magang" data-i18n="tab_magang">💼 Magang</button>
       </div>
 
       <!-- Project Grid -->
@@ -512,7 +513,7 @@
           </div>
         </div> -->
 
-        <div class="project-card reveal reveal-delay-2 cursor-pointer group" data-project-id="home-credit" data-category="ai">
+        <div class="project-card reveal reveal-delay-2 cursor-pointer group" data-project-id="home-credit" data-category="ai magang">
           <img src="img/projects/homecredit-slide-1.png" alt="Home Credit Default Risk Prediction" class="project-thumb object-cover" />
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
@@ -547,24 +548,41 @@
           </div>
         </div>
 
-        <div class="project-card reveal reveal-delay-1 cursor-pointer group" data-project-id="looker-analytics" data-category="ai">
-          <img src="img/projects/looker-dashboard-myskill.png" alt="Google Looker Studio Analytics Dashboards" class="project-thumb object-cover" />
+        <div class="project-card reveal reveal-delay-1 cursor-pointer group" data-project-id="looker-analytics-cc" data-category="ai">
+          <img src="img/projects/looker-dashboard-cc.png" alt="Google Looker Studio Analytics Dashboards" class="project-thumb object-cover" />
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
               <h3 class="font-semibold text-charcoal text-base">Google Looker Dashboard</h3>
               <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Course</span>
             </div>
-            <p class="project-desc text-sm text-gray-500 leading-relaxed mb-3">Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Nasabah Kartu Kredit (MySkill) dan Laporan Transaksi Retail senilai $8.69M.</p>
+            <p class="project-desc text-sm text-gray-500 leading-relaxed mb-3">Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Nasabah Kartu Kredit.</p>
             <div class="flex flex-wrap gap-1.5">
               <span class="tech-tag">Looker Studio</span>
               <span class="tech-tag">Business Intelligence</span>
-              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Excel</span>
             </div>
             <div class="mt-3 pt-2.5 border-t border-pink-soft/20 flex items-center justify-between text-xs text-pink-deep font-semibold group-hover:text-pink-hover transition-colors"><span data-i18n="card_hint">Lihat Mockup & Kontribusi ↗</span><span>🔍</span></div>
           </div>
         </div>
 
-        <div class="project-card reveal reveal-delay-2 cursor-pointer group" data-project-id="web-scraping" data-category="ai">
+        <div class="project-card reveal reveal-delay-2 cursor-pointer group" data-project-id="looker-analytics-retail" data-category="ai">
+          <img src="img/projects/looker-dashboard-retail.png" alt="Google Looker Studio Analytics Dashboards" class="project-thumb object-cover" />
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-charcoal text-base">Google Looker Dashboard</h3>
+              <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full font-mono whitespace-nowrap">Course</span>
+            </div>
+            <p class="project-desc text-sm text-gray-500 leading-relaxed mb-3">Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Laporan Transaksi Retail senilai $8.69M.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-tag">Looker Studio</span>
+              <span class="tech-tag">Business Intelligence</span>
+              <span class="tech-tag">Excel</span>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-pink-soft/20 flex items-center justify-between text-xs text-pink-deep font-semibold group-hover:text-pink-hover transition-colors"><span data-i18n="card_hint">Lihat Mockup & Kontribusi ↗</span><span>🔍</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3 cursor-pointer group" data-project-id="web-scraping" data-category="ai">
           <div class="project-thumb-placeholder bg-gradient-to-br from-pink-soft to-cream-dark">🕷️</div>
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
@@ -668,7 +686,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal reveal-delay-1 cursor-pointer group" data-project-id="lokantara-mobile" data-category="riset">
+        <div class="project-card reveal reveal-delay-1 cursor-pointer group" data-project-id="lokantara-mobile" data-category="qa riset">
           <img src="img/projects/lokantara.png" alt="Lokantara Mobile" class="project-thumb object-contain p-4 bg-gradient-to-br from-pink-soft/20 to-cream" />
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
@@ -702,7 +720,8 @@
           </div>
         </div>
 
-        <div class="project-card reveal cursor-pointer group" data-project-id="magang-saas" data-category="riset">
+        <!-- ── MAGANG INDUSTRI ── -->
+        <div class="project-card reveal cursor-pointer group" data-project-id="magang-saas" data-category="magang">
           <img src="img/projects/magang-saas-slide-1.png" alt="Multi-Tenant SaaS Website Desa & POS" class="project-thumb object-cover" />
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
@@ -714,7 +733,7 @@
               <span class="tech-tag">Project Manager</span>
               <span class="tech-tag">Fullstack Web</span>
               <span class="tech-tag">Multi-Tenant</span>
-              <span class="tech-tag">POS BUMDes</span>
+              <span class="tech-tag">POS Desa</span>
             </div>
             <div class="mt-3 pt-2.5 border-t border-pink-soft/20 flex items-center justify-between text-xs text-pink-deep font-semibold group-hover:text-pink-hover transition-colors"><span data-i18n="card_hint">Lihat Mockup & Kontribusi ↗</span><span>🔍</span></div>
           </div>
@@ -746,8 +765,8 @@
                 <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_1_title">Tugas Akhir / Skripsi — App "Tuntun"</h3>
                 <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2026</span>
               </div>
-              <p class="text-sm text-gray-500">Politeknik Harapan Bersama / Universitas Harkat Negeri</p>
-              <p class="text-sm text-gray-600 mt-1" data-i18n="exp_1_desc">Pengembangan aplikasi panduan visual berbasis Flutter & AI untuk pengguna difabel — penyelesaian studi D4 Teknik Informatika.</p>
+              <p class="text-sm text-gray-500">Universitas Harkat Negeri</p>
+              <p class="text-sm text-gray-600 mt-1" data-i18n="exp_1_desc">Pengembangan aplikasi panduan visual berbasis Flutter, AI & Machine Learning untuk pengguna tunanetra — tugas akhir studi D4 Teknik Informatika.</p>
             </div>
           </div>
         </div>
@@ -776,7 +795,7 @@
                 <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_3_title">Penelitian Dosen — Atlantara & Lokantara</h3>
                 <span class="font-mono text-xs text-pink-deep bg-pink-soft px-2 py-0.5 rounded-full">2025–2026</span>
               </div>
-              <p class="text-sm text-gray-500">Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-500">Universitas Harkat Negeri</p>
               <p class="text-sm text-gray-600 mt-1" data-i18n="exp_3_desc">Berperan dalam development & QA sistem wisata terintegrasi Atlantara — meliputi POS Web, Mobile Flutter, dan modul AI.</p>
             </div>
           </div>
@@ -788,11 +807,11 @@
             <span class="text-2xl">🏢</span>
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
-                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_4_title">Project Manager & Fullstack Dev — SaaS Desa (PT ISG)</h3>
+                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_4_title">Project Manager & Fullstack Web Dev — SaaS Desa (PT ISG)</h3>
                 <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2025</span>
               </div>
               <p class="text-sm text-gray-500">Kerja Praktik Industri (KPI) — PT ISG (Semester 7)</p>
-              <p class="text-sm text-gray-600 mt-1" data-i18n="exp_4_desc">Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT ISG.</p>
+              <p class="text-sm text-gray-600 mt-1" data-i18n="exp_4_desc">Memimpin manajemen sprint task serta merancang platform SaaS sistem informasi manajemen desa multi-tenant yang terintegrasi Point of Sale (POS) BUMDes di PT Intermedia Solusindo Global.</p>
             </div>
           </div>
         </div>
@@ -818,10 +837,10 @@
             <span class="text-2xl">👑</span>
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
-                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_6_title">Ketua Himpunan Mahasiswa HMPTI</h3>
+                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_6_title">Ketua Himpunan Mahasiswa (HMPTI)</h3>
                 <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2024</span>
               </div>
-              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Universitas Harkat Negeri</p>
               <p class="text-sm text-gray-600 mt-1" data-i18n="exp_6_desc">Memimpin organisasi himpunan mahasiswa program studi, mengkoordinir kegiatan akademik dan non-akademik anggota.</p>
             </div>
           </div>
@@ -878,10 +897,10 @@
             <span class="text-2xl">📋</span>
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
-                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_10_title">Sekretaris Himpunan Mahasiswa HMPTI</h3>
+                <h3 class="font-semibold text-charcoal text-base" data-i18n="exp_10_title">Sekretaris Himpunan Mahasiswa (HMPTI)</h3>
                 <span class="font-mono text-xs text-sage-dark bg-sage-light px-2 py-0.5 rounded-full">2023</span>
               </div>
-              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Politeknik Harapan Bersama</p>
+              <p class="text-sm text-gray-500">Himpunan Mahasiswa — Universitas Harkat Negeri</p>
               <p class="text-sm text-gray-600 mt-1" data-i18n="exp_10_desc">Bertanggung jawab dalam pengelolaan administrasi, dokumentasi, dan korespondensi organisasi himpunan mahasiswa.</p>
             </div>
           </div>
@@ -947,7 +966,7 @@
         <div class="cert-card reveal reveal-delay-2 cursor-pointer group" data-cert-id="coursera">
           <div class="text-2xl">🌐</div>
           <h3 class="font-semibold text-charcoal text-sm">Coursera</h3>
-          <p class="text-xs text-gray-500">Sertifikasi internasional bidang IT & Data</p>
+          <p class="text-xs text-gray-500">Sertifikasi internasional bidang IT & Data Visualization</p>
           <span class="text-xs bg-sage-light text-sage-dark px-2 py-0.5 rounded-full self-start font-mono">Coursera</span>
         </div>
 
@@ -987,7 +1006,7 @@
       <div class="text-center mb-10 reveal">
         <h2 class="section-title" data-i18n="activities_title">Organisasi & Aktivitas</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle mt-4" data-i18n="activities_subtitle">Dokumentasi kepemimpinan Himpunan Mahasiswa HMPTI, pengabdian masyarakat hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik</p>
+        <p class="section-subtitle mt-4" data-i18n="activities_subtitle">Dokumentasi kepemimpinan Himpunan Mahasiswa TI, pengabdian masyarakat, hibah POMN & PKM Kemendikbudristek, serta kegiatan akademik</p>
       </div>
 
       <!-- Activities Carousel Slider -->
@@ -1056,7 +1075,7 @@
             <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-xl flex-shrink-0">📧</div>
             <div>
               <div class="text-white/60 text-xs uppercase tracking-wider mb-0.5" data-i18n="contact_email_header">Email</div>
-              <a href="mailto:berlianiirisqi@gmail.com" class="text-white font-medium hover:text-pink-soft transition-colors">berlianiirisqi@gmail.com</a>
+              <a href="mailto:berlianirsq@gmail.com" class="text-white font-medium hover:text-pink-soft transition-colors">berlianirsq@gmail.com</a>
             </div>
           </div>
           <div class="flex items-center gap-4 text-white">
@@ -1069,7 +1088,7 @@
 
           <!-- Social Links -->
           <div class="flex gap-3 mt-2">
-            <a href="https://www.linkedin.com/in/berliani-risqi/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/berlianirisqi" target="_blank" rel="noopener noreferrer"
               class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white transition-all hover:scale-110 shadow-sm" title="LinkedIn">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
@@ -1077,7 +1096,7 @@
               class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white transition-all hover:scale-110 shadow-sm" title="GitHub">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
-            <a href="https://www.instagram.com/berlianirisqi/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/berlianirsq/" target="_blank" rel="noopener noreferrer"
               class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center text-white transition-all hover:scale-110 shadow-sm" title="Instagram">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>

@@ -86,19 +86,19 @@ const PROJECTS_DATA = {
       id: [
         'Project Tugas Akhir (Skripsi) yang dikerjakan secara mandiri secara menyeluruh (End-to-End Individual Project).',
         'Merancang arsitektur sistem deteksi objek & estimasi jarak rintangan berbasis YOLO dan Triangle Similarity Algorithm.',
-        'Mengembangkan frontend mobile multiplatform menggunakan Flutter dengan navigasi audio, panduan suara TTS, dan feedback getar.',
+        'Mengembangkan frontend mobile menggunakan Flutter dengan navigasi audio, panduan suara TTS, dan feedback getar.',
         'Membangun integrasi model AI edge computing (TFLite) agar dapat berjalan cepat dan offline pada smartphone.',
-        'Melaksanakan pengujian kualitas perangkat lunak komprehensif berstandar ISO 25010.'
+        'Melaksanakan pengujian kualitas perangkat lunak komprehensif menggunakan Black Box Testing dan Usability Testing .'
       ],
       en: [
         'Independently designed and developed the entire end-to-end assistive navigation application as a Final Year Project.',
         'Implemented object detection & obstacle avoidance AI models using YOLO and Triangle Similarity algorithms for distance estimation.',
-        'Developed cross-platform mobile frontend with Flutter, custom audio cues, TTS voice assistance, and haptic feedback.',
+        'Developed mobile frontend with Flutter, custom audio cues, TTS voice assistance, and haptic feedback.',
         'Built on-device edge AI integration (TFLite) for fast offline inference directly on smartphones.',
-        'Conducted rigorous software quality assurance testing based on ISO 25010 standards.'
+        'Conducted rigorous software quality assurance testing using Black Box Testing and Usability Testing.'
       ]
     },
-    tech: ['Flutter', 'TFLite', 'YOLO', 'Python', 'Triangle Similarity', 'TTS', 'ISO 25010'],
+    tech: ['Flutter', 'TFLite', 'YOLO', 'Python', 'Triangle Similarity', 'TTS', 'Usability Testing', 'SUS', 'Black Box Testing'],
     links: [
       { text: '📱 Google Play Store ↗', url: 'https://play.google.com/store/apps/details?id=com.hn.tuntun&hl=en' },
       { text: 'GitHub Repo ↗', url: 'https://github.com/berliani/TunTunApp' }
@@ -130,60 +130,60 @@ const PROJECTS_DATA = {
     tech: ['Flutter', 'YOLOv11', 'Monocular Depth', 'OpenCV', 'Python', 'Computer Vision'],
     links: []
   },
-  'foodplan-web': {
-    title: 'FoodPlan Web Dashboard',
-    badge: 'Capstone Smt 5',
-    category: 'Web Application',
-    desc: {
-      id: 'Dashboard admin web untuk manajemen resep, user, dan statistik analitik penggunaan aplikasi FoodPlan.',
-      en: 'Web admin dashboard for recipe catalog management, user accounts, and usage analytics for the FoodPlan platform.'
-    },
-    images: [
-      { src: 'img/projects/foodplan-web.png', caption: 'FoodPlan Web — Dashboard Admin & Manajemen Resep Makanan' },
-      { src: 'img/projects/foodplan-mockup.png', caption: 'FoodPlan Web — Skema Integrasi Database & API Model' }
-    ],
-    contributions: {
-      id: [
-        'Membangun dashboard web responsif menggunakan HTML, CSS, JavaScript, dan Bootstrap untuk admin ahli gizi dan pengelola resep.',
-        'Merancang fitur CRUD untuk perencanaan menu makanan, basis data kalori, dan visualisasi grafik analitik.',
-        'Mengintegrasikan REST API yang menghubungkan dashboard web dengan basis data MySQL.'
-      ],
-      en: [
-        'Built responsive web dashboard using HTML, CSS, JavaScript, and Bootstrap for admin nutritionists and recipe managers.',
-        'Designed CRUD features for meal planning, calorie databases, and user analytics visualization.',
-        'Integrated REST APIs connecting dashboard to PostgreSQL / MySQL database.'
-      ]
-    },
-    tech: ['Laravel', 'AdminLTE', 'MySQL', 'REST API', 'Chart.js', 'Bootstrap'],
-    links: []
-  },
-  'bicaraku-web': {
-    title: 'Bicaraku Web Dashboard',
-    badge: 'Capstone Smt 6',
-    category: 'Web & Analytics',
-    desc: {
-      id: 'Dashboard analitik berbasis Streamlit untuk visualisasi data sentimen & aktivitas pemantauan pengguna Bicaraku.',
-      en: 'Analytics dashboard built on Streamlit for visualizing sentiment insights and user therapy session activity.'
-    },
-    images: [
-      { src: 'img/projects/bicaraku-mockup-1.png', caption: 'Bicaraku Dashboard — Monitoring Sesi Terapi Wicara & Visualisasi Data' },
-      { src: 'img/projects/bicaraku.png', caption: 'Bicaraku — Identitas Aplikasi & Alur Analitik' }
-    ],
-    contributions: {
-      id: [
-        'Mengembangkan portal pemantauan dan administrasi berbasis web untuk tracking sesi terapi wicara.',
-        'Mengimplementasikan visualisasi analitik audio, laporan progres pengguna, dan manajemen konten edukasi.',
-        'Menghubungkan endpoint backend Flask dengan autentikasi hak akses berbasis peran.'
-      ],
-      en: [
-        'Developed web-based admin & monitoring portal for speech therapy session tracking.',
-        'Implemented audio analytics overview, user progress reports, and content management.',
-        'Connected Flask backend endpoints and authenticated role-based access.'
-      ]
-    },
-    tech: ['Python', 'Streamlit', 'Flask', 'Pandas', 'Plotly', 'MongoDB'],
-    links: []
-  },
+  // 'foodplan-web': {
+  //   title: 'FoodPlan Web Dashboard',
+  //   badge: 'Capstone Smt 5',
+  //   category: 'Web Application',
+  //   desc: {
+  //     id: 'Dashboard admin web untuk manajemen resep, user, dan statistik analitik penggunaan aplikasi FoodPlan.',
+  //     en: 'Web admin dashboard for recipe catalog management, user accounts, and usage analytics for the FoodPlan platform.'
+  //   },
+  //   images: [
+  //     { src: 'img/projects/foodplan-web.png', caption: 'FoodPlan Web — Dashboard Admin & Manajemen Resep Makanan' },
+  //     { src: 'img/projects/foodplan-mockup.png', caption: 'FoodPlan Web — Skema Integrasi Database & API Model' }
+  //   ],
+  //   contributions: {
+  //     id: [
+  //       'Membangun dashboard web responsif menggunakan HTML, CSS, JavaScript, dan Bootstrap untuk admin ahli gizi dan pengelola resep.',
+  //       'Merancang fitur CRUD untuk perencanaan menu makanan, basis data kalori, dan visualisasi grafik analitik.',
+  //       'Mengintegrasikan REST API yang menghubungkan dashboard web dengan basis data MySQL.'
+  //     ],
+  //     en: [
+  //       'Built responsive web dashboard using HTML, CSS, JavaScript, and Bootstrap for admin nutritionists and recipe managers.',
+  //       'Designed CRUD features for meal planning, calorie databases, and user analytics visualization.',
+  //       'Integrated REST APIs connecting dashboard to PostgreSQL / MySQL database.'
+  //     ]
+  //   },
+  //   tech: ['Laravel', 'AdminLTE', 'MySQL', 'REST API', 'Chart.js', 'Bootstrap'],
+  //   links: []
+  // },
+  // 'bicaraku-web': {
+  //   title: 'Bicaraku Web Dashboard',
+  //   badge: 'Capstone Smt 6',
+  //   category: 'Web & Analytics',
+  //   desc: {
+  //     id: 'Dashboard analitik berbasis Streamlit untuk visualisasi data sentimen & aktivitas pemantauan pengguna Bicaraku.',
+  //     en: 'Analytics dashboard built on Streamlit for visualizing sentiment insights and user therapy session activity.'
+  //   },
+  //   images: [
+  //     { src: 'img/projects/bicaraku-mockup-1.png', caption: 'Bicaraku Dashboard — Monitoring Sesi Terapi Wicara & Visualisasi Data' },
+  //     { src: 'img/projects/bicaraku.png', caption: 'Bicaraku — Identitas Aplikasi & Alur Analitik' }
+  //   ],
+  //   contributions: {
+  //     id: [
+  //       'Mengembangkan portal pemantauan dan administrasi berbasis web untuk tracking sesi terapi wicara.',
+  //       'Mengimplementasikan visualisasi analitik audio, laporan progres pengguna, dan manajemen konten edukasi.',
+  //       'Menghubungkan endpoint backend Flask dengan autentikasi hak akses berbasis peran.'
+  //     ],
+  //     en: [
+  //       'Developed web-based admin & monitoring portal for speech therapy session tracking.',
+  //       'Implemented audio analytics overview, user progress reports, and content management.',
+  //       'Connected Flask backend endpoints and authenticated role-based access.'
+  //     ]
+  //   },
+  //   tech: ['Python', 'Streamlit', 'Flask', 'Pandas', 'Plotly', 'MongoDB'],
+  //   links: []
+  // },
   'lokantara-web': {
     title: 'Lokantara POS Web Application',
     badge: 'Penelitian Dosen',
@@ -228,18 +228,16 @@ const PROJECTS_DATA = {
         'Menyusun test plan dan matriks test cases pengujian manual black-box untuk aplikasi Lokantara Mitra dan Lokantara User.',
         'Menguji modul Lokantara Mitra: pendaftaran mitra, autentikasi login, pengelolaan profil tempat wisata, upload foto destinasi, konfigurasi harga & kuota tiket, dan integrasi kasir/POS.',
         'Menguji modul Lokantara User: pencarian destinasi wisata, filter kategori, alur pemesanan tiket, simulasi checkout, validasi barcode/QRIS, serta pengecekan e-tiket.',
-        'Menerapkan metode Boundary Value Analysis dan Equivalence Partitioning untuk validasi field input dan penanganan skenario error.',
         'Mendokumentasikan bug reporting, langkah-langkah reproduksi masalah (steps to reproduce), serta re-testing pasca bug fixing bersama tim developer.'
       ],
       en: [
         'Designed test plans and black-box manual test matrices for both Lokantara Mitra (Merchant) and Lokantara User (Tourist) mobile apps.',
         'Tested Lokantara Mitra module: merchant registration, authentication, attraction profile CRUD, photo uploads, ticket quota/pricing management, and POS transactions.',
         'Tested Lokantara User module: destination search, category filtering, ticket booking workflows, checkout simulation, QRIS payment verification, and e-ticket history.',
-        'Applied Boundary Value Analysis and Equivalence Partitioning methodologies for form input validation and error handling robustness.',
         'Documented defect tracking, detailed steps to reproduce, and regression verification post-bug fixes with software developers.'
       ]
     },
-    tech: ['Manual Testing', 'Black-box Testing', 'Test Case Design', 'Boundary Value Analysis', 'Equivalence Partitioning', 'Flutter Mobile QA'],
+    tech: ['Manual Testing', 'Black-box Testing', 'Test Case Design', 'Flutter Mobile QA'],
     links: []
   },
   'lokantara-ai': {
@@ -386,37 +384,65 @@ const PROJECTS_DATA = {
     tech: ['MediaPipe', 'OpenCV', 'Python', 'NumPy'],
     links: []
   },
-  'looker-analytics': {
+  'looker-analytics-cc': {
     title: 'Google Looker Studio Analytics Dashboards',
     badge: 'Business Intelligence & Analytics',
     category: 'Data Visualization & Reporting',
     desc: {
-      id: 'Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Nasabah Kartu Kredit (MySkill Final Project) dan Laporan Transaksi Retail senilai $8.69M.',
-      en: 'Interactive Business Intelligence dashboards built with Google Looker Studio: Credit Card Customer Intelligence (MySkill Final Project) and $8.69M Retail Sales Report.'
+      id: 'Dashboard Business Intelligence interaktif Google Looker Studio: Analisis Nasabah Kartu Kredit (MySkill Final Project)',
+      en: 'Interactive Business Intelligence dashboards built with Google Looker Studio: Credit Card Customer Intelligence (MySkill Final Project)'
     },
     images: [
-      { src: 'img/projects/looker-dashboard-myskill.png', caption: 'Google Looker Studio — Credit Card Customer Intelligence & Delinquency Dashboard (MySkill Final Project)' },
-      { src: 'img/projects/looker-dashboard-retail.png', caption: 'Google Looker Studio — Retail E-Commerce $8.69M Sales & Regional Performance Analytics' },
-      { src: 'img/certificates/cert-myskill.png', caption: 'MySkill — Data Analysis & Visualization Professional Certification' }
+      { src: 'img/projects/looker-dashboard-cc.png', caption: 'Google Looker Studio — Credit Card Customer Intelligence & Delinquency Dashboard' },
+      { src: 'img/projects/looker-dashboard-cc2.png', caption: 'Page 2'},
+      { src: 'img/projects/looker-dashboard-cc3.png', caption: 'Page 3'},
     ],
     contributions: {
       id: [
         'Merancang dashboard Business Intelligence interaktif pada Google Looker Studio untuk analisis portofolio kartu kredit nasabah (MySkill Final Project).',
         'Membangun visualisasi metrik utama: total revolving balance, segmentasi tingkat penghasilan, kategori kartu, status pernikahan, dan tingkat delinquency.',
-        'Mengembangkan dashboard analitik transaksi penjualan ritel senilai $8.69M dengan 82.000+ pesanan, breakdown performa per kategori produk dan regional.',
-        'Menerapkan calculated fields kustom, custom blending data dari spreadsheet / basis data SQL, serta filter kontrol interaktif dinamis.',
-        'Menghasilkan insight analitis untuk mengidentifikasi segmen nasabah berisiko tinggi dan peluang optimasi omzet ritel.'
+        'Menerapkan calculated fields kustom, custom blending data dari spreadsheet / basis data SQL, serta filter kontrol interaktif dinamis.'
       ],
       en: [
         'Engineered interactive Business Intelligence dashboards in Google Looker Studio for credit card customer portfolio intelligence (MySkill Final Project).',
         'Visualized key operational metrics: total revolving balance, income tier breakdown, card tier adoption, marital distributions, and delinquency ratios.',
-        'Developed retail transaction reporting dashboards analyzing $8.69M in revenue across 82K+ purchase orders and multi-regional distributions.',
-        'Implemented custom calculated fields, data blending from tabular sources and SQL, and dynamic cross-filter controls.',
-        'Extracted analytical insights to pinpoint high-risk customer segments and revenue growth opportunities.'
+        'Implemented custom calculated fields, data blending from tabular sources and SQL, and dynamic cross-filter controls.'
       ]
     },
     tech: ['Google Looker Studio', 'Business Intelligence', 'Data Blending', 'Calculated Fields', 'SQL', 'Google Sheets'],
-    links: []
+    links: [
+      { text: '📊 Dashboard ↗', url: 'https://datastudio.google.com/s/v7sE6qKLLSE' }
+    ]
+  },
+  'looker-analytics-retail': {
+    title: 'Google Looker Studio Analytics Dashboards',
+    badge: 'Business Intelligence & Analytics',
+    category: 'Data Visualization & Reporting',
+    desc: {
+      id: 'Dashboard Business Intelligence interaktif Google Looker Studio: Laporan Transaksi Retail.',
+      en: 'Interactive Business Intelligence dashboards built with Google Looker Studio: Retail Sales Report.'
+    },
+    images: [
+      { src: 'img/projects/looker-dashboard-retail.png', caption: 'Google Looker Studio — Retail E-Commerce $8.69M Sales & Regional Performance Analytics' },
+      { src: 'img/projects/looker-dashboard-retail2.png', caption:'Page 2'},
+      { src: 'img/projects/looker-dashboard-retail3.png', caption: 'Page 3'},
+    ],
+    contributions: {
+      id: [
+        'Mengembangkan dashboard analitik transaksi penjualan ritel senilai $8.69M dengan 82.000+ pesanan, breakdown performa per kategori produk dan regional.',
+        'Menerapkan calculated fields kustom, custom blending data dari spreadsheet / basis data SQL, serta filter kontrol interaktif dinamis.',
+        'Menghasilkan insight analitis untuk mengidentifikasi peluang optimasi omzet ritel.'
+      ],
+      en: [
+        'Developed retail transaction reporting dashboards analyzing $8.69M in revenue across 82K+ purchase orders and multi-regional distributions.',
+        'Implemented custom calculated fields, data blending from tabular sources and SQL, and dynamic cross-filter controls.',
+        'Extracted analytical insights to pinpoint revenue growth opportunities.'
+      ]
+    },
+    tech: ['Google Looker Studio', 'Business Intelligence', 'Data Blending', 'Calculated Fields', 'SQL', 'Google Sheets'],
+    links: [
+      { text: '📊 Dashboard ↗', url: 'https://datastudio.google.com/s/uSUINXJGclg'}
+    ]
   },
   'web-scraping': {
     title: 'Automated Web Scraping Engine',
@@ -572,17 +598,17 @@ const PROJECTS_DATA = {
       en: 'Multi-Tenant SaaS Village Management Information System integrated with BUMDes Point of Sales (POS) developed during industrial internship at PT ISG.'
     },
     images: [
-      { src: 'img/projects/magang-saas-slide-1.png', caption: 'SaaS Website Desa & POS — Laporan Magang Industri PT ISG (Semester 7)' },
-      { src: 'img/projects/magang-saas-slide-2.png', caption: 'Latar Belakang & Urgensi Tata Kelola Digital Desa Terpadu Multi-Tenant' },
-      { src: 'img/projects/magang-saas-slide-3.png', caption: 'Arsitektur Multi-Tenant SaaS & Integrasi Point of Sale (POS) BUMDes' },
-      { src: 'img/projects/magang-saas-slide-4.png', caption: 'Manajemen Proyek Agile: Perancangan Task, Sprint Backlog & WBS' },
-      { src: 'img/projects/magang-saas-slide-5.png', caption: 'Antarmuka Portal Web Desa, Layanan Surat Online & Kasir POS BUMDes' }
+      { src: 'img/projects/magang-saas-slide-1.png', caption: 'SaaS Website Desa & POS — Laporan Magang Industri PT ISG' },
+      { src: 'img/projects/magang-saas-slide-2.png', caption: 'Project Manager - Membuat rencana kerja, timeline, dan pemangku kepentingan' },
+      { src: 'img/projects/magang-saas-slide-3.png', caption: 'Pengelolaan database multi-tenant menggunakan MySQL' },
+      { src: 'img/projects/magang-saas-slide-4.png', caption: 'Dashboard POS untuk role warga' },
+      { src: 'img/projects/magang-saas-slide-5.png', caption: 'Kasir POS BUMDes' }
     ],
     contributions: {
       id: [
         'Bertindak sebagai Project Manager: menyusun Work Breakdown Structure (WBS), merancang dan mengelola task backlog, membagi tanggung jawab tim pengembang, serta memonitor timeline sprint magang.',
         'Bertindak sebagai Fullstack Web Developer: membangun arsitektur multi-tenant SaaS yang memungkinkan satu platform melayani banyak instansi desa secara independen dan aman.',
-        'Mengembangkan modul Point of Sales (POS) kasir terintegrasi untuk BUMDes dan unit usaha desa (transaksi kasir, manajemen inventaris barang, cetak struk, dan pelaporan keuangan).',
+        'Mengembangkan modul Point of Sales (POS) kasir terintegrasi untuk unit usaha masyarakat desa (transaksi kasir, manajemen inventaris barang, cetak struk, dan pelaporan keuangan).',
         'Merancang modul administrasi persuratan desa mandiri bagi warga serta konfigurasi routing sub-domain dinamis untuk setiap tenant desa.',
         'Menyusun dokumentasi teknis sistem, materi presentasi laporan magang, serta mempresentasikan hasil proyek di hadapan manajemen PT ISG.'
       ],
@@ -669,7 +695,7 @@ const ACTIVITIES_DATA = [
   {
     img: 'img/kegiatan/optimized/AZR06624.jpg',
     full: 'img/kegiatan/optimized/AZR06624.jpg',
-    category: { id: 'Kepemimpinan', en: 'Leadership' }
+    category: { id: 'Organisasi Mahasiswa', en: 'Student Organization' }
   },
   {
     img: 'img/kegiatan/optimized/AZR08051.jpg',
@@ -679,12 +705,12 @@ const ACTIVITIES_DATA = [
   {
     img: 'img/kegiatan/optimized/DSC08118.jpg',
     full: 'img/kegiatan/optimized/DSC08118.jpg',
-    category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
+    category: { id: 'Organisasi Mahasiswa', en: 'Student Organization' }
   },
   {
     img: 'img/kegiatan/optimized/HMS04592.jpg',
     full: 'img/kegiatan/optimized/HMS04592.jpg',
-    category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
+    category: { id: 'Organisasi Mahasiswa', en: 'Student Organization' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20240811-WA0039.jpg',
@@ -699,7 +725,7 @@ const ACTIVITIES_DATA = [
   {
     img: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
     full: 'img/kegiatan/optimized/IMG-20241024-WA0061.jpg',
-    category: { id: 'Delegasi & Prestasi', en: 'Delegation' }
+    category: { id: 'Organisasi Mahasiswa', en: 'Student Organization' }
   },
   {
     img: 'img/kegiatan/optimized/IMG-20241117-WA0080.jpg',
@@ -709,17 +735,17 @@ const ACTIVITIES_DATA = [
   {
     img: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
     full: 'img/kegiatan/optimized/IMG-20250206-WA0044.jpg',
-    category: { id: 'Ekspo & Gelar Karya', en: 'Exposition' }
+    category: { id: 'Delegasi', en: 'Delegation' }
   },
   {
     img: 'img/kegiatan/optimized/IMG_5879.jpg',
     full: 'img/kegiatan/optimized/IMG_5879.jpg',
-    category: { id: 'Regenerasi Organisasi', en: 'Governance' }
+    category: { id: 'Organisasi Mahasiswa', en: 'Student Organization' }
   },
   {
     img: 'img/kegiatan/optimized/P1030241.jpg',
     full: 'img/kegiatan/optimized/P1030241.jpg',
-    category: { id: 'Solidaritas Organisasi', en: 'Community' }
+    category: { id: 'Pengabdian Masyarakat', en: 'Community Service' }
   }
 ];
 
@@ -864,8 +890,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = tab.dataset.filter;
 
       projectCards.forEach(card => {
-        const cat = card.dataset.category;
-        const match = filter === 'all' || cat === filter;
+        const categories = (card.dataset.category || '').split(/[\s,]+/);
+        const match = filter === 'all' || categories.includes(filter);
         card.style.display = match ? 'block' : 'none';
         if (match) {
           card.style.animation = 'none';
@@ -918,7 +944,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const subject = encodeURIComponent(`[Portfolio] Pesan dari ${name}`);
     const body    = encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\n${message}`);
-    window.open(`mailto:berlianiirisqi@gmail.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:berlianiirsq@gmail.com?subject=${subject}&body=${body}`);
 
     contactForm.reset();
     const btn = document.getElementById('submitBtn');
