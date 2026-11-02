@@ -599,7 +599,7 @@ const PROJECTS_DATA = {
     },
     images: [
       { src: 'img/projects/magang-saas-slide-1.png', caption: 'SaaS Website Desa & POS — Laporan Magang Industri PT ISG' },
-      { src: 'img/projects/magang-saas-slide-2.png', caption: 'Project Manager - Membuat rencana kerja, timeline, dan pemangku kepentingan' },
+      { src: 'img/projects/magang-saas-slide-2.png', caption: 'Project Manager - Membuat rencana kerja, timeline, dan pengujian aplikasi' },
       { src: 'img/projects/magang-saas-slide-3.png', caption: 'Pengelolaan database multi-tenant menggunakan MySQL' },
       { src: 'img/projects/magang-saas-slide-4.png', caption: 'Dashboard POS untuk role warga' },
       { src: 'img/projects/magang-saas-slide-5.png', caption: 'Kasir POS BUMDes' }
@@ -607,6 +607,8 @@ const PROJECTS_DATA = {
     contributions: {
       id: [
         'Bertindak sebagai Project Manager: menyusun Work Breakdown Structure (WBS), merancang dan mengelola task backlog, membagi tanggung jawab tim pengembang, serta memonitor timeline sprint magang.',
+        'Melakukan Blackbox Testing terhadap fitur-fitur yang telah dikembangkan',
+        'Melakukan pengujian terhadap sistem untuk memastikan sistem berjalan sesuai dengan spesifikasi dan kebutuhan pengguna.',
         'Bertindak sebagai Fullstack Web Developer: membangun arsitektur multi-tenant SaaS yang memungkinkan satu platform melayani banyak instansi desa secara independen dan aman.',
         'Mengembangkan modul Point of Sales (POS) kasir terintegrasi untuk unit usaha masyarakat desa (transaksi kasir, manajemen inventaris barang, cetak struk, dan pelaporan keuangan).',
         'Merancang modul administrasi persuratan desa mandiri bagi warga serta konfigurasi routing sub-domain dinamis untuk setiap tenant desa.',
@@ -614,6 +616,8 @@ const PROJECTS_DATA = {
       ],
       en: [
         'Served as Project Manager: defined Work Breakdown Structures (WBS), organized agile task backlogs, allocated responsibilities across developers, and monitored delivery milestones.',
+        'Performed rigorous black-box testing across all developed features.',
+        'Tested system functionality to ensure alignment with specifications and user requirements.',
         'Served as Fullstack Web Developer: built scalable multi-tenant SaaS architecture allowing a unified platform to serve multiple village administrations independently and securely.',
         'Developed integrated Point of Sales (POS) cashier modules for village-owned enterprises (BUMDes) and local MSMEs (sales checkout, stock management, receipt generation, financial reports).',
         'Designed citizen self-service administrative letter request workflows and dynamic sub-domain routing for individual village tenants.',
@@ -645,6 +649,20 @@ const CERTS_DATA = {
     issuer: 'Huawei ICT Academy',
     image: 'img/certificates/cert-huawei.jpg',
     badge: 'Internasional',
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
+  },
+  'myskilltest': {
+    title: 'MySkill - QA Test Activity',
+    issuer: 'MySkill Indonesia',
+    image: 'img/certificates/qa test activity.jpg',
+    badge: 'Skill Specialization',
+    link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
+  },
+  'myskillauto': {
+    title: 'MySkill - QA Automation',
+    issuer: 'MySkill Indonesia',
+    image: 'img/certificates/qa automation.jpg',
+    badge: 'Skill Specialization',
     link: 'img/CurriculumVitaeQA-BerlianiRisqi.pdf'
   },
   'digitalent': {
