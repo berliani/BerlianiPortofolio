@@ -193,8 +193,7 @@ const PROJECTS_DATA = {
       en: 'Point-of-Sale (POS) cashier system for tourism partners on the Atlantara platform — ticketing, billing, and reporting.'
     },
     images: [
-      { src: 'img/projects/lokantara.png', caption: 'Lokantara — POS Wisata Platform Atlantara' },
-      { src: 'img/projects/lokantara-lockup.png', caption: 'Atlantara — Ekosistem Digital Pariwisata Terpadu' }
+      { src: 'img/projects/lokantara.png', caption: 'Atlantara' },
     ],
     contributions: {
       id: [
@@ -220,8 +219,7 @@ const PROJECTS_DATA = {
       en: 'Comprehensive manual black-box testing for the Atlantara Lokantara mobile platform covering both Merchant (Mitra) and Tourist (User) modules.'
     },
     images: [
-      { src: 'img/projects/lokantara.png', caption: 'Lokantara Mobile — Verifikasi Kualitas Aplikasi Kasir Mitra & Portal Wisatawan' },
-      { src: 'img/projects/lokantara-lockup.png', caption: 'Atlantara — Ekosistem Platform Pariwisata Digital Terpadu' }
+      { src: 'img/projects/lokantara.png', caption: 'Lokantara Mobile' },
     ],
     contributions: {
       id: [
@@ -238,7 +236,9 @@ const PROJECTS_DATA = {
       ]
     },
     tech: ['Manual Testing', 'Black-box Testing', 'Test Case Design', 'Flutter Mobile QA'],
-    links: []
+     links: [
+      { text: '📂 Test case documentation ↗', url: 'https://docs.google.com/spreadsheets/d/11Qf0t6dymKTgECZGnNaZYPRXJhStSzEK/edit?usp=sharing&ouid=116579920058476973709&rtpof=true&sd=true' }
+    ]
   },
   'lokantara-ai': {
     title: 'Lokantara AI — Itinerary Recommendation & Voice STT',
@@ -478,8 +478,6 @@ const PROJECTS_DATA = {
     },
     images: [
       { src: 'img/projects/foodplan-sus-results.png', caption: 'Hasil Pengujian Usability SUS — 20 Responden, Skor Rata-Rata 77.63 (Grade B: Good/Acceptable) & Flutter Unit/Widget Test' },
-      { src: 'img/projects/foodplan-mockup.png', caption: 'FoodPlan — Cakupan Pengujian Komponen Mobile & Integrasi AI' },
-      { src: 'img/projects/foodplan.png', caption: 'FoodPlan — Antarmuka Pengujian Deteksi Bahan Makanan & Fitur Resep' }
     ],
     contributions: {
       id: [
@@ -497,8 +495,10 @@ const PROJECTS_DATA = {
         'Derived actionable UI/UX and interaction design recommendations based on empirical user feedback to improve mobile usability.'
       ]
     },
-    tech: ['Flutter Test', 'Unit Testing', 'Widget Testing', 'System Usability Scale (SUS)', 'Dart', 'UX Research'],
-    links: []
+    tech: ['Flutter Test', 'Unit Testing', 'Widget Testing', 'System Usability Scale (SUS)', 'GT Metrix', 'API Testing', 'Dart', 'UX Research'],
+     links: [
+      { text: '📄 FoodPlan Testing Report ↗', url: 'https://drive.google.com/file/d/1-pGZaIa1sOLx9PU4YTqz1rBH32c7Ia6j/view?usp=sharing' }
+    ]
   },
   'qa-bicaraku': {
     title: 'Pengujian Kualitas ISO/IEC 25010 Bicaraku',
@@ -509,10 +509,8 @@ const PROJECTS_DATA = {
       en: 'Comprehensive software quality assurance for the Bicaraku app under ISO/IEC 25010 standards, including PRD, Test Plan, Test Design, Test Cases, and Katalon Studio automation.'
     },
     images: [
-      { src: 'img/projects/qa-bicaraku-slide-1.png', caption: 'Laporan Pengujian Kualitas Perangkat Lunak Bicaraku — Standar ISO/IEC 25010' },
       { src: 'img/projects/qa-bicaraku-slide-2.png', caption: 'Katalon Studio — Otomasi Pengujian, Test Suite & Test Design Matrix' },
       { src: 'img/projects/qa-bicaraku-slide-3.png', caption: 'Katalon Studio — Detail Step Execution & Verifikasi Log Uji Regresi' },
-      { src: 'img/projects/qa-bicaraku-slide-4.png', caption: 'Evaluasi Karakteristik Mutu ISO 25010: Functional, Usability, Reliability & Performance' }
     ],
     contributions: {
       id: [
@@ -558,7 +556,7 @@ const PROJECTS_DATA = {
         'Generated automated documentation collections for cross-team backend integration.'
       ]
     },
-    tech: ['Postman', 'Newman', 'Katalon Studio', 'REST API Testing', 'JSON Schema'],
+    tech: ['Postman',  'Katalon Studio', 'REST API Testing', 'JSON Schema'],
     links: []
   },
   'numbrarush': {
